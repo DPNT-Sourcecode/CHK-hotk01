@@ -141,11 +141,11 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+FtotalVal+AtotalVal
+        return totalVal+BtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal
 
 
 
-ret = checkout("AAAAAAAAA")
+ret = checkout("HHHHHHHHH")
 print (ret)
 
 # 200+130+50
