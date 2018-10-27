@@ -17,28 +17,24 @@ def checkout(skus):
         for item, val in dir_sku.items():
             if item =='A':
                 if val <3:
-                    totalVal=val*50
+                    totalVal=(val*50)+totalVal
                 else:
                     reminder=val%3
                     indVal=int(math.floor(val/3))
-                    totalVal=(indVal*130)+(reminder*50)
+                    totalVal=((indVal*130)+(reminder*50))+totalVal
             elif item =='B':
                  if val < 2:
-                     totalVal = val * 30
+                     totalVal = (val * 30)+totalVal
                  else:
                      reminder = val % 2
                      indVal = int(math.floor(val / 2))
-                     totalVal = (indVal * 45) + (reminder * 30)
+                     totalVal = ((indVal * 45) + (reminder * 30))+totalVal
             elif item == 'C':
-                totalVal = val * 20
+                totalVal = (val * 20)+totalVal
             elif item == 'D':
-                totalVal = val * 15
+                totalVal = (val * 15)+totalVal
 
 
         #totalVal=A_sum+B_sum
         return totalVal
 
-
-sku =('B,B,B,C,D')
-ret=checkout(sku)
-print(ret)
