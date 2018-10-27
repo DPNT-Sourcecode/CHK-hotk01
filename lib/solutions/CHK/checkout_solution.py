@@ -57,8 +57,8 @@ def checkout(skus):
         for item, val in dir_sku.items():
             # For A section
             if item =='A':
-                
-
+                A_val=module1(val,3,130,5,200,50)
+                print (A_val)
             elif item =='B':
                  b_val=val
                  if b_val < 2:
@@ -134,12 +134,12 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+FtotalVal
+        return totalVal+BtotalVal+FtotalVal+A_val
 
 
 
-# ret = checkout("FFFF")
-# print (ret)
+ret = checkout("AAAAAAAAA")
+print (ret)
 
 # 200+130+50
 
