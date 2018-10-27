@@ -68,8 +68,10 @@ def checkout(skus):
                 elif val==2:
                     print(2)
                     totalVal = (val * 40) + totalVal
+                    print (totalVal)
                     b_new_val = (b_val -1)
-                    if b_new_val < 2:
+                    if (b_new_val < 2 and b_new_val!=0):
+                        print (b_new_val)
                         totalVal = (b_new_val * 30) + totalVal
                     else:
                         reminder = b_new_val % 2
