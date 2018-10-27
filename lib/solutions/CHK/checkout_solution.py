@@ -8,7 +8,8 @@ def checkout(skus):
     from collections import Counter
     # Create list , assuming input string  will be having A,A,B,C,D,E format
     lis=[]
-    lis=skus.split()
+    lis=skus
+    print (lis)
     totalVal=0
     if not lis:
         return -1
@@ -38,3 +39,5 @@ def checkout(skus):
         #totalVal=A_sum+B_sum
         return totalVal
 
+ret=checkout("ABCDCBAABCABBAAA")
+print (ret)
