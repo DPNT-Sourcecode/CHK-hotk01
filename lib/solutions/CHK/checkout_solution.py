@@ -14,6 +14,8 @@ def checkout(skus):
     totalVal=0
     idealVal=[]
     idealVal=['A','B','C','D','E']
+    lis.sort()
+    print (lis)
     if not lis:
         return 0
     elif len(lis)==0:
@@ -64,5 +66,5 @@ def checkout(skus):
         return totalVal
 
 
-ret = checkout("AAAAAAA")
+ret = checkout("EAAAAAAAB")
 print (ret)
