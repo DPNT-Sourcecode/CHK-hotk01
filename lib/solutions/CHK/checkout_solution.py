@@ -7,22 +7,22 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
        else: #if value grater than 3A
            reminder = val % sku1
            indVal = int(math.floor(val / sku1))
-           retVal = ((indVal * 130) + (reminder * 50))
+           retVal = ((indVal * price1) + (reminder * baseprice))
     else:
-        reminder = val % 5
+        reminder = val % sku2
         # print("reminder--",reminder)
-        if reminder > 3:
-            reminder3 = reminder % 3
-            indVal = int(math.floor(reminder / 3))
-            indVal5 = int(math.floor(val / 5))
-            totalVal = (indVal * 130) + (reminder3 * 50)+ (indVal5 * 200)
-        elif reminder == 3:
+        if reminder > sku1:
+            reminder3 = reminder % sku1
+            indVal = int(math.floor(reminder / sku1))
+            indVal5 = int(math.floor(val / sku2))
+            retVal = (indVal * price1) + (reminder3 * baseprice)+ (indVal5 * price2)
+        elif reminder == sku1:
             # print ("else")
-            indVal5 = int(math.floor(val / 5))
-            totalVal = 130 + (indVal5 * 200)
-        elif reminder < 3:
-            indVal5 = int(math.floor(val / 5))
-            totalVal = (reminder * 50) + (indVal5 * 200)
+            indVal5 = int(math.floor(val / sku2))
+            retVal = price1 + (indVal5 * price2)
+        elif reminder < sku1:
+            indVal5 = int(math.floor(val / sku2))
+            retVal = (reminder * baseprice) + (indVal5 * price2)
 
     return retVal
 
@@ -57,28 +57,7 @@ def checkout(skus):
         for item, val in dir_sku.items():
             # For A section
             if item =='A':
-                if val<5:
-                    if val <3:
-                        totalVal=(val*50)+totalVal
-                    else:
-                        reminder=val%3
-                        indVal=int(math.floor(val/3))
-                        totalVal=((indVal*130)+(reminder*50))+totalVal
-                else:
-                    reminder=val%5
-                    # print("reminder--",reminder)
-                    if reminder>3:
-                        reminder3 = reminder % 3
-                        indVal  = int(math.floor(reminder / 3))
-                        indVal5 = int(math.floor(val / 5))
-                        totalVal = (indVal * 130) + (reminder3 * 50) + totalVal+(indVal5*200)
-                    elif reminder==3:
-                        # print ("else")
-                        indVal5 = int(math.floor(val / 5))
-                        totalVal = 130 + totalVal + (indVal5 * 200)
-                    elif reminder<3:
-                        indVal5 = int(math.floor(val / 5))
-                        totalVal=(reminder * 50) + totalVal + (indVal5 * 200)
+                
 
             elif item =='B':
                  b_val=val
