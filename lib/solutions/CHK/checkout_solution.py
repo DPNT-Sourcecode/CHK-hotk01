@@ -22,7 +22,7 @@ def checkout(skus):
         return -1
     else:
         dir_sku=Counter(lis)
-        print (dir_sku)
+        # print (dir_sku)
         #print (dir_sku)
         for item, val in dir_sku.items():
             # For A section
@@ -111,7 +111,7 @@ def checkout(skus):
 
 
 
-# ret = checkout("ABCDECBAABCABBAAAEEAA")
+# ret = checkout("AAAAAEEBAAABB")
 # print (ret)
 
 # 200+130+50
