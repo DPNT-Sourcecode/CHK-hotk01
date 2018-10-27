@@ -55,11 +55,11 @@ def checkout(skus):
                 totalVal = (val * 15)+totalVal
             elif item =='E':
                 if val < 2:
-                    totalVal = (val * 30) + totalVal
-                else:
-                    reminder = val % 2
-                    indVal = int(math.floor(val / 2))
-                    totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                    totalVal = (val * 40) + totalVal
+                    totalVal = (b_val * 30) + totalVal
+                elif val==2:
+                    totalVal = (val * 40) + totalVal
+                    totalVal = (b_val * 30) + totalVal
 
             elif item not in idealVal:
                 return -1
