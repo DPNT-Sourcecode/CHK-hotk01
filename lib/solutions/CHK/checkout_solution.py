@@ -16,6 +16,8 @@ def checkout(skus):
     idealVal=['A','B','C','D']
     if not lis:
         return -1
+    elif len(lis)==0:
+        return -1
     else:
         dir_sku=Counter(lis)
         print (dir_sku)
@@ -45,5 +47,5 @@ def checkout(skus):
         return totalVal
 
 
-ret = checkout("        ")
+ret = checkout("")
 print (ret)
