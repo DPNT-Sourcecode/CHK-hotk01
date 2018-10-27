@@ -66,25 +66,25 @@ def checkout(skus):
                         indVal = int(math.floor(b_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
                 elif val==2:
-                    print(2)
+                    # print(2)
                     totalVal = (val * 40) + totalVal
-                    print (totalVal)
+                    # print (totalVal)
                     b_new_val = (b_val -1)
-                    if (b_new_val < 2 and b_new_val!=0):
-                        print (b_new_val)
+                    if (b_new_val < 2 and b_new_val >0):
+                        # print (b_new_val)
                         totalVal = (b_new_val * 30) + totalVal
-                    else:
+                    elif(b_new_val >2):
                         reminder = b_new_val % 2
                         indVal = int(math.floor(b_new_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
                 elif val > 2:
-                    print(3)
+                    # print(3)
                     totalVal = (val * 40) + totalVal
                     indVal = int(math.floor(val / 2))
                     b_new_val = (b_val - val)
-                    if b_new_val < 2:
+                    if (b_new_val < 2 and b_new_val >0):
                         totalVal = (b_new_val * 30) + totalVal
-                    else:
+                    elif(b_new_val >2):
                         reminder = b_new_val % 2
                         indVal = int(math.floor(b_new_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
