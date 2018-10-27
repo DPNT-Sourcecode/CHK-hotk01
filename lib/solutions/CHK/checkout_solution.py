@@ -104,10 +104,10 @@ def checkout(skus):
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
                     elif (b_new_val ==2):
                         totalVal = 45 + totalVal
-                elif item == 'F':
-                    if (val<2 and val>0):
-                        print(1)
-                        BtotalVal=(10*val)
+            elif item == 'F':
+                  if (val<2 and val>0):
+                       print(1)
+                       BtotalVal=(10*val)
                     elif val==2:
                         FtotalVal=(10*3)
                     elif val > 2:
@@ -123,7 +123,7 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal
+        return totalVal+BtotalVal+FtotalVal
 
 
 
