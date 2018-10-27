@@ -26,7 +26,7 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
 
     return retVal
 
-
+def moodule2()
 
 
 # noinspection PyUnusedLocal
@@ -145,7 +145,7 @@ def checkout(skus):
 
 
 
-ret = checkout("HHHHHHHHH")
+ret = checkout("HHHHHHHHHHHHHHHH")
 print (ret)
 
 # 200+130+50
