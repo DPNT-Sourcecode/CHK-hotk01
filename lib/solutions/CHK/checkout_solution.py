@@ -44,8 +44,11 @@ def checkout(skus):
     idealVal=[]
     idealVal=['A','B','C','D','E','F','G','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z']
     b_val=0
+    AtotalVal=0
     BtotalVal=0
     FtotalVal=0
+    HtotalVal = 0
+    VtotalVal = 0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -57,8 +60,8 @@ def checkout(skus):
         for item, val in dir_sku.items():
             # For A section
             if item =='A':
-                A_val=module1(val,3,130,5,200,50)
-                print (A_val)
+                AtotalVal=module1(val,3,130,5,200,50)
+                print (AtotalVal)
             elif item =='B':
                  b_val=val
                  if b_val < 2:
@@ -134,7 +137,7 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+FtotalVal+A_val
+        return totalVal+BtotalVal+FtotalVal+AtotalVal
 
 
 
