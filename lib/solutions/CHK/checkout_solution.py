@@ -1,11 +1,30 @@
 def module1(val,sku1,price1,sku2,price2,baseprice):
-    
     import math
     retVal=0
-    if val < sku1:
-       if val < sku2:
+    if val < sku2:
+       if val < sku1: # if less than 3A
            retVal = (val * baseprice)
+       else: #if value grater than 3A
+           reminder = val % sku1
+           indVal = int(math.floor(val / sku1))
+           retVal = ((indVal * 130) + (reminder * 50))
+    else:
+        reminder = val % 5
+        # print("reminder--",reminder)
+        if reminder > 3:
+            reminder3 = reminder % 3
+            indVal = int(math.floor(reminder / 3))
+            indVal5 = int(math.floor(val / 5))
+            totalVal = (indVal * 130) + (reminder3 * 50)+ (indVal5 * 200)
+        elif reminder == 3:
+            # print ("else")
+            indVal5 = int(math.floor(val / 5))
+            totalVal = 130 + (indVal5 * 200)
+        elif reminder < 3:
+            indVal5 = int(math.floor(val / 5))
+            totalVal = (reminder * 50) + (indVal5 * 200)
 
+    return retVal
 
 
 
@@ -14,7 +33,7 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
 # skus = unicode string
 def checkout(skus):
     #raise NotImplementedError()
-
+    import math
     from collections import Counter
     # Create list , assuming input string  will be having A,A,B,C,D,E format
     # Removed Split function as input is not comma separated
