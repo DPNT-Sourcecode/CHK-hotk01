@@ -14,14 +14,13 @@ def checkout(skus):
     totalVal=0
     idealVal=[]
     idealVal=['A','B','C','D','E']
-    lis.sort()
-    print (lis)
     if not lis:
         return 0
     elif len(lis)==0:
         return -1
     else:
         dir_sku=Counter(lis)
+        print (dir_sku)
         #print (dir_sku)
         for item, val in dir_sku.items():
             # For A section
