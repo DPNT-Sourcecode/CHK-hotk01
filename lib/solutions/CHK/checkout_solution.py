@@ -22,6 +22,7 @@ def checkout(skus):
         dir_sku=Counter(lis)
         #print (dir_sku)
         for item, val in dir_sku.items():
+            # For A section
             if item =='A':
                 if val<5:
                     if val <3:
