@@ -61,7 +61,11 @@ def checkout(skus):
             # For A section
             if item =='A':
                 AtotalVal=module1(val,3,130,5,200,50)
-                print (AtotalVal)
+                # print (AtotalVal)
+            elif item =='H':
+                HtotalVal = module1(val, 5, 45, 10, 80, 10)
+            elif item == 'V':
+                VtotalVal = module1(val, 2, 90, 3, 130, 50) #2V for 90, 3V for 130
             elif item =='B':
                  b_val=val
                  if b_val < 2:
