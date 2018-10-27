@@ -8,6 +8,7 @@ def checkout(skus):
     from collections import Counter
     # Create list , assuming input string  will be having A,A,B,C,D,E format
     # Removed Split function as input is not comma separated
+    # Checking null string
     lis=[]
     lis=skus
     totalVal=0
@@ -44,3 +45,5 @@ def checkout(skus):
         return totalVal
 
 
+ret = checkout("        ")
+print (ret)
