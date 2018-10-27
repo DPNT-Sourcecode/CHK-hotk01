@@ -16,6 +16,7 @@ def checkout(skus):
     idealVal=['A','B','C','D','E','F']
     b_val=0
     BtotalVal=0
+    FtotalVal=0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -103,6 +104,17 @@ def checkout(skus):
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
                     elif (b_new_val ==2):
                         totalVal = 45 + totalVal
+                elif item == 'F':
+                    if (val<2 and val>0):
+                        FtotalVal=(10*val)
+                    elif val==2:
+                        FtotalVal=(10*3)
+                    elif val > 2:
+                        # indVal = int(math.floor(val/ 2))
+                        reminder = val % 2
+                        if reminder
+                        FtotalVal=(val*10)+
+
             elif item not in idealVal:
                 return -1
 
