@@ -22,7 +22,7 @@ def checkout(skus):
         return -1
     else:
         dir_sku=Counter(lis)
-        # print (dir_sku)
+        print (dir_sku)
         #print (dir_sku)
         for item, val in dir_sku.items():
             # For A section
@@ -49,6 +49,7 @@ def checkout(skus):
                     elif reminder<3:
                         indVal5 = int(math.floor(val / 5))
                         totalVal=(reminder * 50) + totalVal + (indVal5 * 200)
+            
             elif item =='B':
                  b_val=val
                  if b_val < 2:
@@ -76,12 +77,12 @@ def checkout(skus):
                     elif (b_val ==2):
                         totalVal = 45 + totalVal
                 elif val==2:
-                    print(2)
+                    #print(2)
                     totalVal = (val * 40) + totalVal
                     # print (totalVal)
                     b_new_val = (b_val -1)
                     if (b_new_val < 2 and b_new_val >0):
-                        print (b_new_val)
+                        #print (b_new_val)
                         totalVal = (b_new_val * 30) + totalVal
                     elif(b_new_val >2):
                         reminder = b_new_val % 2
@@ -110,7 +111,8 @@ def checkout(skus):
 
 
 
-ret = checkout("AAAAAEEBAAABB")
+ret = checkout("ABCDECBAABCABBAAAEEAA")
 print (ret)
 
-330+80+45
+200+130+50
+
