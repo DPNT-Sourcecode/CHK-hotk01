@@ -14,6 +14,7 @@ def checkout(skus):
     totalVal=0
     idealVal=[]
     idealVal=['A','B','C','D','E']
+    b_val=0
     if not lis:
         return 0
     elif len(lis)==0:
