@@ -10,6 +10,8 @@ def checkout(skus):
     lis=[]
     lis=skus
     totalVal=0
+    idealVal=[]
+    idealVal=['A','B','C','D']
     if not lis:
         return -1
     else:
