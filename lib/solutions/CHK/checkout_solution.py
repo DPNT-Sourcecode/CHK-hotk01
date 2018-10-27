@@ -130,7 +130,7 @@ def checkout(skus):
 
 
 
-ret = checkout("FFF")
+ret = checkout("FFFFFF")
 print (ret)
 
 # 200+130+50
