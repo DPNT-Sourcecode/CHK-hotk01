@@ -8,7 +8,7 @@ def checkout(skus):
     from collections import Counter
     # Create list , assuming input string  will be having A,A,B,C,D,E format
     lis=[]
-    lis=skus.split(",")
+    lis=skus.split()
     totalVal=0
     if not lis:
         return -1
