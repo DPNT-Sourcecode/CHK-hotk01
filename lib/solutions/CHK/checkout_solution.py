@@ -13,7 +13,7 @@ def checkout(skus):
     lis=skus
     totalVal=0
     idealVal=[]
-    idealVal=['A','B','C','D']
+    idealVal=['A','B','C','D','E']
     if not lis:
         return 0
     elif len(lis)==0:
@@ -23,12 +23,14 @@ def checkout(skus):
         #print (dir_sku)
         for item, val in dir_sku.items():
             if item =='A':
-                if val <3:
-                    totalVal=(val*50)+totalVal
-                else:
-                    reminder=val%3
-                    indVal=int(math.floor(val/3))
-                    totalVal=((indVal*130)+(reminder*50))+totalVal
+                if val<5:
+                    if val <3:
+                        totalVal=(val*50)+totalVal
+                    else:
+                        reminder=val%3
+                        indVal=int(math.floor(val/3))
+                        totalVal=((indVal*130)+(reminder*50))+totalVal
+                else
             elif item =='B':
                  if val < 2:
                      totalVal = (val * 30)+totalVal
