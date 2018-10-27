@@ -15,12 +15,12 @@ def checkout(skus):
     idealVal=[]
     idealVal=['A','B','C','D']
     if not lis:
-        return -1
+        return 0
     elif len(lis)==0:
         return -1
     else:
         dir_sku=Counter(lis)
-        print (dir_sku)
+        #print (dir_sku)
         for item, val in dir_sku.items():
             if item =='A':
                 if val <3:
@@ -46,4 +46,3 @@ def checkout(skus):
         #totalVal=A_sum+B_sum
         return totalVal
 
-
