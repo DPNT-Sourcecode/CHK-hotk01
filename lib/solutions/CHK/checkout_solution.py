@@ -121,7 +121,7 @@ def checkout(skus):
                         FtotalVal=((FdivVal+1)*10)
                     else:
                         # print("else")
-                        FtotalVal = (FdivVal * 10)
+                        FtotalVal = ((FdivVal+1) * 10)
             elif item not in idealVal:
                 return -1
 
@@ -130,8 +130,8 @@ def checkout(skus):
 
 
 
-# ret = checkout("AFFFFFFFF")
-# print (ret)
+ret = checkout("FFF")
+print (ret)
 
 # 200+130+50
 
