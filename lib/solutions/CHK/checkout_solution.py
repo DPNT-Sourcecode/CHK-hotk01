@@ -13,7 +13,7 @@ def checkout(skus):
     lis=skus
     totalVal=0
     idealVal=[]
-    idealVal=['A','B','C','D','E','F']
+    idealVal=['A','B','C','D','E','F','G','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z']
     b_val=0
     BtotalVal=0
     FtotalVal=0
