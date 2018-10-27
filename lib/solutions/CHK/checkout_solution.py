@@ -20,7 +20,7 @@ def checkout(skus):
         return -1
     else:
         dir_sku=Counter(lis)
-        print (dir_sku)
+        # print (dir_sku)
         #print (dir_sku)
         for item, val in dir_sku.items():
             # For A section
@@ -34,7 +34,7 @@ def checkout(skus):
                         totalVal=((indVal*130)+(reminder*50))+totalVal
                 else:
                     reminder=val%5
-                    print("reminder--",reminder)
+                    # print("reminder--",reminder)
                     if reminder>3:
                         reminder3 = reminder % 3
                         indVal  = int(math.floor(reminder / 3))
@@ -89,7 +89,3 @@ def checkout(skus):
         return totalVal
 
 
-ret = checkout("EEAAAAABBB")
-print (ret)
-
-200+45+30+40
