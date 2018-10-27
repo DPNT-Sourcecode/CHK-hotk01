@@ -32,12 +32,13 @@ def checkout(skus):
                         totalVal=((indVal*130)+(reminder*50))+totalVal
                 else:
                     reminder=val%5
-                    if reminder>3:
+                    if reminder<3:
                         reminder3 = val % 3
                         indVal  = int(math.floor(reminder / 3))
                         indVal5 = int(math.floor(reminder / 5))
                         totalVal = ((indVal * 130) + (reminder3 * 50)) + totalVal+(indVal5*200)
                     else:
+                        print ("else")
                         indVal5 = int(math.floor(reminder / 5))
                         totalVal = (reminder * 50) + totalVal + (indVal5 * 200)
             elif item =='B':
@@ -58,5 +59,5 @@ def checkout(skus):
         return totalVal
 
 
-ret = checkout("A,A,A,A,A,A,A,A")
+ret = checkout("AAAAAAAA")
 print (ret)
