@@ -1,12 +1,13 @@
 def module1(val,sku1,cnt1,sku2,cnt2,baseprice):
     import math
+    retVal=0
     if val < sku1:
        if val < sku2:
-           totalVal = (val * baseprice) + totalVal
+           retVal = (val * baseprice)
         else:
             reminder = val % 3
             indVal = int(math.floor(val / 3))
-            totalVal = ((indVal * 130) + (reminder * baseprice)) + totalVal
+            retVal = ((indVal * 130) + (reminder * baseprice))
         else:
             reminder = val % 5
             # print("reminder--",reminder)
@@ -18,10 +19,10 @@ def module1(val,sku1,cnt1,sku2,cnt2,baseprice):
             elif reminder == 3:
                 # print ("else")
                 indVal5 = int(math.floor(val / 5))
-                totalVal = 130 + totalVal + (indVal5 * 200)
+                retVal = 130 + (indVal5 * 200)
             elif reminder < 3:
                 indVal5 = int(math.floor(val / 5))
-                totalVal = (reminder * baseprice) + totalVal + (indVal5 * 200)
+                retVal = (reminder * baseprice) + (indVal5 * 200)
 
 
 
