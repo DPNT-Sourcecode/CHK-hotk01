@@ -57,10 +57,25 @@ def checkout(skus):
                 if val < 2:
                     totalVal = (val * 40) + totalVal
                     totalVal = (b_val * 30) + totalVal
+
                 elif val==2:
                     totalVal = (val * 40) + totalVal
-                    totalVal = (b_val * 30) + totalVal
-
+                    b_new_val = (b_val -1)
+                    if b_new_val < 2:
+                        totalVal = (b_new_val * 30) + totalVal
+                    else:
+                        reminder = b_new_val % 2
+                        indVal = int(math.floor(b_new_val / 2))
+                        totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                elif val > 2:
+                    totalVal = (val * 40) + totalVal
+                    b_new_val = (b_val - 1)
+                    if b_new_val < 2:
+                        totalVal = (b_new_val * 30) + totalVal
+                    else:
+                        reminder = b_new_val % 2
+                        indVal = int(math.floor(b_new_val / 2))
+                        totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
             elif item not in idealVal:
                 return -1
 
