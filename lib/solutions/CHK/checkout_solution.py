@@ -15,6 +15,7 @@ def checkout(skus):
     idealVal=[]
     idealVal=['A','B','C','D','E']
     b_val=0
+    BtotalVal=0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -51,18 +52,19 @@ def checkout(skus):
             elif item =='B':
                  b_val=val
                  if b_val < 2:
-                     totalVal = (b_val * 30) + totalVal
+                     BtotalVal = (b_val * 30) + totalVal
                  else:
                      reminder = b_val % 2
                      indVal = int(math.floor(b_val / 2))
-                     totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                     BtotalVal = ((indVal * 45) + (reminder * 30)) + totalVal
             elif item == 'C':
                 totalVal = (val * 20)+totalVal
             elif item == 'D':
                 totalVal = (val * 15)+totalVal
             elif item =='E':
+                BtotalVal=0
                 if val < 2:
-                    print(1)
+                    #print(1)
                     totalVal = (val * 40) + totalVal
                     # totalVal = (b_val * 30) + totalVal
                     if (b_val < 2 and b_val >0):
@@ -98,10 +100,10 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal
+        return totalVal+BtotalVal
 
 
 
-ret = checkout("B")
-print (ret)
+# ret = checkout("BE")
+# print (ret)
 
