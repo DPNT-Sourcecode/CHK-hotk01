@@ -9,12 +9,12 @@ def checkout(skus):
     # Create list , assuming input string  will be having A,A,B,C,D,E format
     lis=[]
     lis=skus
-    print (lis)
     totalVal=0
     if not lis:
         return -1
     else:
         dir_sku=Counter(lis)
+        print (dir_sku)
         for item, val in dir_sku.items():
             if item =='A':
                 if val <3:
