@@ -50,6 +50,12 @@ def checkout(skus):
                         totalVal=(reminder * 50) + totalVal + (indVal5 * 200)
             elif item =='B':
                  b_val=val
+                 if b_val < 2:
+                     totalVal = (b_val * 30) + totalVal
+                 else:
+                     reminder = b_val % 2
+                     indVal = int(math.floor(b_val / 2))
+                     totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
             elif item == 'C':
                 totalVal = (val * 20)+totalVal
             elif item == 'D':
@@ -96,6 +102,6 @@ def checkout(skus):
 
 
 
-ret = checkout("BB")
+ret = checkout("B")
 print (ret)
 
