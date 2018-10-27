@@ -48,16 +48,19 @@ def checkout(skus):
                         indVal5 = int(math.floor(val / 5))
                         totalVal=(reminder * 50) + totalVal + (indVal5 * 200)
             elif item =='B':
-                 if val < 2:
-                     totalVal = (val * 30)+totalVal
-                 else:
-                     reminder = val % 2
-                     indVal = int(math.floor(val / 2))
-                     totalVal = ((indVal * 45) + (reminder * 30))+totalVal
+                 b_val=val
             elif item == 'C':
                 totalVal = (val * 20)+totalVal
             elif item == 'D':
                 totalVal = (val * 15)+totalVal
+            elif item =='E':
+                if val < 2:
+                    totalVal = (val * 30) + totalVal
+                else:
+                    reminder = val % 2
+                    indVal = int(math.floor(val / 2))
+                    totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+
             elif item not in idealVal:
                 return -1
 
