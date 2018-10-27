@@ -117,8 +117,8 @@ def checkout(skus):
                     print(FdivVal)
                     print(reminder)
                     #reminder = int(math.floor(reminder)) + 1
-                    if isinstance(FdivVal,float):
-                        FtotalVal=(FdivVal*10)
+                    if reminder!=0:
+                        FtotalVal=((FdivVal+1)*10)
                     else:
                         print("else")
                         FtotalVal = (FdivVal * 10)
@@ -130,7 +130,7 @@ def checkout(skus):
 
 
 
-ret = checkout("FFFFFFF")
+ret = checkout("AFFFFFFFF")
 print (ret)
 
 # 200+130+50
