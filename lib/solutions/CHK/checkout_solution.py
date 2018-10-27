@@ -73,18 +73,22 @@ def checkout(skus):
                         reminder = b_val % 2
                         indVal = int(math.floor(b_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                    elif (b_val ==2):
+                        totalVal = 45 + totalVal
                 elif val==2:
                     print(2)
                     totalVal = (val * 40) + totalVal
                     # print (totalVal)
                     b_new_val = (b_val -1)
                     if (b_new_val < 2 and b_new_val >0):
-                        # print (b_new_val)
+                        print (b_new_val)
                         totalVal = (b_new_val * 30) + totalVal
                     elif(b_new_val >2):
                         reminder = b_new_val % 2
                         indVal = int(math.floor(b_new_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                    elif (b_new_val ==2):
+                        totalVal = 45 + totalVal
                 elif val > 2:
                     # print(3)
                     totalVal = (val * 40) + totalVal
@@ -96,6 +100,8 @@ def checkout(skus):
                         reminder = b_new_val % 2
                         indVal = int(math.floor(b_new_val / 2))
                         totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                    elif (b_new_val ==2):
+                        totalVal = 45 + totalVal
             elif item not in idealVal:
                 return -1
 
