@@ -104,6 +104,6 @@ def checkout(skus):
 
 
 
-# ret = checkout("BE")
-# print (ret)
+ret = checkout("AAAAAEEBAAABB")
+print (ret)
 
