@@ -1,3 +1,27 @@
+def module1(val,sku1,cnt1,sku2,cnt2,baseprice):
+        if val < sku1:
+            if val < sku2:
+                totalVal = (val * baseprice) + totalVal
+            else:
+                reminder = val % 3
+                indVal = int(math.floor(val / 3))
+                totalVal = ((indVal * 130) + (reminder * baseprice)) + totalVal
+        else:
+            reminder = val % 5
+            # print("reminder--",reminder)
+            if reminder > 3:
+                reminder3 = reminder % 3
+                indVal = int(math.floor(reminder / 3))
+                indVal5 = int(math.floor(val / 5))
+                totalVal = (indVal * 130) + (reminder3 * baseprice) + totalVal + (indVal5 * 200)
+            elif reminder == 3:
+                # print ("else")
+                indVal5 = int(math.floor(val / 5))
+                totalVal = 130 + totalVal + (indVal5 * 200)
+            elif reminder < 3:
+                indVal5 = int(math.floor(val / 5))
+                totalVal = (reminder * baseprice) + totalVal + (indVal5 * 200)
+
 
 
 # noinspection PyUnusedLocal
