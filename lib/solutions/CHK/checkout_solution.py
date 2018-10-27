@@ -7,6 +7,7 @@ def checkout(skus):
     import math
     from collections import Counter
     # Create list , assuming input string  will be having A,A,B,C,D,E format
+    # Removed Split function as input is not comma separated
     lis=[]
     lis=skus
     totalVal=0
@@ -36,10 +37,10 @@ def checkout(skus):
                 totalVal = (val * 20)+totalVal
             elif item == 'D':
                 totalVal = (val * 15)+totalVal
-
+            elif item not in idealVal:
+                return -1
 
         #totalVal=A_sum+B_sum
         return totalVal
 
-ret=checkout("ABCDCBAABCABBAAA")
-print (ret)
+
