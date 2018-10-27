@@ -88,3 +88,8 @@ def checkout(skus):
 
         #totalVal=A_sum+B_sum
         return totalVal
+
+
+ret = checkout("B")
+print (ret)
+
