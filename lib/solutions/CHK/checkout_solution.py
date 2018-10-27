@@ -112,14 +112,16 @@ def checkout(skus):
                      FtotalVal=(10*2)
                 elif val > 2:
                     # indVal = int(math.floor(val/ 2))
-                    FdivVal = val/2
+                    FdivVal = (val/2)
+                    reminder= val%2
+                    print(FdivVal)
                     print(reminder)
                     #reminder = int(math.floor(reminder)) + 1
                     if isinstance(FdivVal,float):
-                        FtotalVal=(reminder*10)
+                        FtotalVal=(FdivVal*10)
                     else:
                         print("else")
-                        FtotalVal = (reminder * 10)
+                        FtotalVal = (FdivVal * 10)
             elif item not in idealVal:
                 return -1
 
