@@ -122,7 +122,7 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
             print ("indVal", indVal)
             # print ("reminder", reminder)
             ZtotalVal = module5(3, (indVal * 3), 45, 21)
-            # print ("ZtotalVal", ZtotalVal)
+            print ("ZtotalVal", ZtotalVal)
             totalVal=s_val+x_val
             if totalVal>3:
                 # print ("IN IF CHK")
