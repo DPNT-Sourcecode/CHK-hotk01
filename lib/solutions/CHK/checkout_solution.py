@@ -99,7 +99,7 @@ def module5(qty,val,price,basePrice):
         reminder = val % qty
         indVal = int(math.floor(val / qty))
         retVal = ((indVal * price) + (reminder * basePrice))
-     return  retVal
+    return  retVal
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -142,7 +142,7 @@ def checkout(skus):
                 VtotalVal = module1(val, 2, 90, 3, 130, 50) #2V for 90, 3V for 130
             elif item =='B':
                  b_val=val
-                 
+                 BtotalVal=module5(2,b_val,45,30)
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
@@ -182,7 +182,7 @@ def checkout(skus):
 
 
 
-ret = checkout("FFFFFFF")
+ret = checkout("BBBBB")
 print (ret)
 
 # 200+130+50
