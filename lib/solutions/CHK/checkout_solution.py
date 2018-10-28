@@ -203,13 +203,17 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
              val= val+45
              print('finalVal',finalVal)
              print('cntr', cntr)
+             sTempPrice = 0
+             xTempPrice = 0
+             zTempPrice = 0
             elif lis[cntr]=='s' and cntr>2 and (cntr+1)%3>0 :
-                val = val + s_price
+                sTempPrice = sTempPrice + s_price
             elif lis[cntr]=='x' and cntr>2 and (cntr+1)%3>0:
-                val = val + x_price
+                xTempPrice = xTempPrice + x_price
             elif lis[cntr]=='z' and cntr>2 and (cntr+1)%3>0:
-                val = val + z_price
+                zTempPrice = zTempPrice + z_price
             cntr = cntr + 1
+            val=sTempPrice+xTempPrice+zTempPrice
         else:
             if finalVal=='s':
              val= val+s_price
