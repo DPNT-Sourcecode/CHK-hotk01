@@ -88,19 +88,9 @@ def module4(qty,val,price):
         retVal = (price * 2)
     elif val > qty:
         # indVal = int(math.floor(val/ 2))
-        FdivVal = (val / (qty+1))
         reminder = val % qty
-        print("FdivVal",FdivVal)
-        print("reminder", reminder)
-        if FdivVal==1 and reminder==1:
-            retVal=qty*price
-        elif FdivVal == 1 and reminder > 1:
-            retVal = (qty * price)+(reminder*price)
-        elif reminder != 0:
-            retVal = ((FdivVal + 1) * price)
-        else:
-            # print("else")
-            retVal = ((FdivVal + 1) * price)
+        print(reminder)
+
     return retVal
 
 # noinspection PyUnusedLocal
