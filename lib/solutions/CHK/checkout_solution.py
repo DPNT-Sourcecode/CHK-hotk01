@@ -44,7 +44,7 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
             retVal1 = OrigOfferPrice
     elif val == baseCnt:
         print(2)
-        retVal = (val * 40)
+        retVal = (val * basePrice)
         # print (totalVal)
         b_new_val = (origVal - 1)
         if (b_new_val < OrigOfferCnt and b_new_val > 0):
@@ -92,6 +92,7 @@ def checkout(skus):
     FtotalVal=0
     HtotalVal = 0
     VtotalVal = 0
+    EtotalVal =0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -123,45 +124,8 @@ def checkout(skus):
                 totalVal = (val * 15)+totalVal
             elif item =='E':
                 BtotalVal=0
-                if val < 2:
-                    print(1)
-                    totalVal = (val * 40) + totalVal
-                    # totalVal = (b_val * 30) + totalVal
-                    if (b_val < 2 and b_val >0):
-                        totalVal = (b_val * 30) + totalVal
-                    elif(b_val >0):
-                        reminder = b_val % 2
-                        indVal = int(math.floor(b_val / 2))
-                        totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
-                    elif (b_val ==2):
-                        totalVal = 45 + totalVal
-                elif val==2:
-                    print(2)
-                    totalVal = (val * 40) + totalVal
-                    # print (totalVal)
-                    b_new_val = (b_val -1)
-                    if (b_new_val < 2 and b_new_val >0):
-                        #print (b_new_val)
-                        totalVal = (b_new_val * 30) + totalVal
-                    elif(b_new_val >2):
-                        reminder = b_new_val % 2
-                        indVal = int(math.floor(b_new_val / 2))
-                        totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
-                    elif (b_new_val ==2):
-                        totalVal = 45 + totalVal
-                elif val > 2:
-                    # print(3)
-                    totalVal = (val * 40) + totalVal
-                    indVal = int(math.floor(val / 2))
-                    b_new_val = (b_val - indVal)
-                    if (b_new_val < 2 and b_new_val >0):
-                        totalVal = (b_new_val * 30) + totalVal
-                    elif(b_new_val >2):
-                        reminder = b_new_val % 2
-                        indVal = int(math.floor(b_new_val / 2))
-                        totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
-                    elif (b_new_val ==2):
-                        totalVal = 45 + totalVal
+                VtotalVal ,BtotalVal=moodule2()
+
             elif item == 'F':
                 if (val<2 and val>0):
                     print(1)
