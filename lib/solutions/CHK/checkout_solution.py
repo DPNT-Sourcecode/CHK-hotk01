@@ -32,7 +32,7 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
     retVal1 = 0
     #BtotalVal = 0
     if val < baseCnt:
-        print(189)
+        # print(189)
         retVal = (val * basePrice)
         # totalVal = (b_val * 30) + totalVal
         if (origVal < OrigOfferCnt and origVal > 0):
@@ -195,7 +195,7 @@ def checkout(skus):
 
 
 
-ret = checkout("RRRQQQQ")
+ret = checkout("E")
 print (ret)
 
 # 200+130+50
