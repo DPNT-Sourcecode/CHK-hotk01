@@ -184,12 +184,13 @@ def checkout(skus):
                 MtotalVal=0
                 NtotalVal = module3(val, 40)
                 if val>=3:
-                    print("if")
-                    MtotalVal=module4(3,val,15)
+                    # print("if")
+                    qtyReduce=m_val-(val/3)
+                    MtotalVal=module3(qtyReduce,15)
                 else:
                     MtotalVal =module3(m_val,15)
-                print("MtotalVal",MtotalVal)
-                print("NtotalVal", NtotalVal)
+                # print("MtotalVal",MtotalVal)
+                # print("NtotalVal", NtotalVal)
             elif item not in idealVal:
                 return -1
 
@@ -198,8 +199,8 @@ def checkout(skus):
 
 
 
-ret = checkout("MMMNNN")
-print (ret)
+# ret = checkout("MMMNNNNNN")
+# print (ret)
 
 # 200+130+50
 
