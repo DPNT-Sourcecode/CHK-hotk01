@@ -73,7 +73,7 @@ def module4(qty,val,price):
     elif val > qty:
         # indVal = int(math.floor(val/ 2))
         reminder = val % (qty+1)
-        print("reminder",reminder)
+        # print("reminder",reminder)
         if reminder!=0:
             priceToPaid=(((qty+1)*reminder)-(qty*reminder))
             retVal=(priceToPaid*price)+(qty*price)
@@ -151,13 +151,13 @@ def checkout(skus):
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,2)
-                print("EtotalVal",EtotalVal)
-                print("BtotalVal", BtotalVal)
+                # print("EtotalVal",EtotalVal)
+                # print("BtotalVal", BtotalVal)
             elif item == "F":
                 FtotalVal=module4(2,val,10)
             elif item =='K':
                  KtotalVal=module5(2,val,120,70)
-                 print(KtotalVal)
+                 # print(KtotalVal)
             elif item =='P':
                  PtotalVal=module5(5,val,200,50)
             elif item == 'Q':
@@ -208,9 +208,9 @@ def checkout(skus):
             elif item in ("N"):
                 MtotalVal=0
                 NtotalVal = module3(val, 40)
-                print ("NtotalVal",NtotalVal)
+                # print ("NtotalVal",NtotalVal)
                 if val>=3:
-                    print("if")
+                    # print("if")
                     qtyReduce=m_val-(val/3)
                     if qtyReduce>0:
                         MtotalVal=module3(qtyReduce,15)
@@ -226,8 +226,8 @@ def checkout(skus):
 
 
 
-ret = checkout("S")
-print (ret)
+# ret = checkout("X")
+# print (ret)
 
 # 200+130+50
 
