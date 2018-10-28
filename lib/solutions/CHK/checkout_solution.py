@@ -217,7 +217,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             print ("xTempPrice",xTempPrice)
             print ("zTempPrice",zTempPrice)
             print ("val", val)
-            val=sTempPrice+xTempPrice+zTempPrice+val
+                  #
         else:
             if finalVal=='s':
              val= val+s_price
@@ -226,6 +226,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             elif finalVal=='z':
              val= val+z_price
 
+    val = sTempPrice + xTempPrice + zTempPrice + val
     print ("val",val)
     print(lis)
     return val
@@ -374,7 +375,7 @@ def checkout(skus):
 
 
 
-ret = checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ")
+ret = checkout("SSSS")
 print (ret)
 
 # 200+130+50
