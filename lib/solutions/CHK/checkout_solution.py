@@ -127,6 +127,7 @@ def checkout(skus):
     XtotalVal = 0
     YtotalVal = 0
     ZtotalVal = 0
+    ValCnt = 0
     m_val=0
     if not lis:
         return 0
@@ -179,6 +180,8 @@ def checkout(skus):
                 totalVal = totalVal + resttotalVal
             elif item in ("S","T","X","Y","Z"):
                 # resttotalVal = module3(val, 30)
+                ValCnt=ValCnt+val
+                print ("ValCnt",ValCnt)
                 if item=='S':
                     StotalVal = module5(3, val, 45, 20)
                 elif item == 'T':
