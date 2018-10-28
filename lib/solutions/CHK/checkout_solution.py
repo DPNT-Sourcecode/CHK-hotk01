@@ -29,45 +29,47 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
 def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOfferCnt):
     import math
     retVal=0
-    if val < baseCnt:
-       retVal = (val * basePrice)
+    if item == 'E':
+        BtotalVal = 0
+        if val < 2:
+            print(1)
+            totalVal = (val * 40) + totalVal
             # totalVal = (b_val * 30) + totalVal
-       if(origVal < baseCnt and origVal > 0):
-
-           retVal =(origVal * origBasePrice)
-           elif (origVal > 0):
-                reminder = origVal % baseCnt
-                indVal = int(math.floor(origVal / 2))
-                retVal = ((indVal * 45) + (reminder * 30))
-           elif (origVal == 2):
-                retVal = OrigOfferPrice
+            if (b_val < 2 and b_val > 0):
+                totalVal = (b_val * 30) + totalVal
+            elif (b_val > 0):
+                reminder = b_val % 2
+                indVal = int(math.floor(b_val / 2))
+                totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+            elif (b_val == 2):
+                totalVal = 45 + totalVal
         elif val == 2:
             print(2)
-            retVal = (val * 40)
+            totalVal = (val * 40) + totalVal
             # print (totalVal)
-            b_new_val = (origVal - 1)
+            b_new_val = (b_val - 1)
             if (b_new_val < 2 and b_new_val > 0):
                 # print (b_new_val)
-                retVal = (b_new_val * 30)
+                totalVal = (b_new_val * 30) + totalVal
             elif (b_new_val > 2):
                 reminder = b_new_val % 2
                 indVal = int(math.floor(b_new_val / 2))
-                retVal = ((indVal * 45) + (reminder * 30))
+                totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
             elif (b_new_val == 2):
-                retVal = 45
+                totalVal = 45 + totalVal
         elif val > 2:
             # print(3)
-            retVal = (val * 40)
+            totalVal = (val * 40) + totalVal
             indVal = int(math.floor(val / 2))
-            b_new_val = (origVal - indVal)
+            b_new_val = (b_val - indVal)
             if (b_new_val < 2 and b_new_val > 0):
-                retVal = (b_new_val * 30)
+                totalVal = (b_new_val * 30) + totalVal
             elif (b_new_val > 2):
                 reminder = b_new_val % 2
                 indVal = int(math.floor(b_new_val / 2))
-                totalVal = ((indVal * OrigOfferPrice) + (reminder * 30))
+                totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
             elif (b_new_val == 2):
-                totalVal = OrigOfferPrice
+                totalVal = 45 + totalVal
 
 
 
