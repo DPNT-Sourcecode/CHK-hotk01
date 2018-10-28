@@ -225,8 +225,8 @@ def checkout(skus):
 
 
 
-ret = checkout("XXXYYYY")
-print (ret)
+# ret = checkout("XXXYYYAAY")
+# print (ret)
 
 # 200+130+50
 
