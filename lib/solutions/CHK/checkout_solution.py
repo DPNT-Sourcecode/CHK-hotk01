@@ -62,7 +62,6 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
 def module3(qty,price):
     return qty*price
 
-def module5
 
 def module4(qty,val,price):
     import math
@@ -163,20 +162,20 @@ def checkout(skus):
                 RtotalVal ,QtotalVal=moodule2(val,3,50,q_val,30,80,3)
             elif item == "U":
                 UtotalVal=module4(3,val,40)
-            elif item  in ("W","T","G","C"):
+            elif item  in ("W","G","C"):
                 resttotalVal=module3(val,20)
                 totalVal=totalVal+resttotalVal
-            elif item in ("X", "L"):
+            elif item in ("L"):
                 resttotalVal = module3(val, 90)
                 totalVal = totalVal + resttotalVal
-            elif item in ("Y","O"):
+            elif item in ("O"):
                 resttotalVal = module3(val, 10)
                 totalVal = totalVal + resttotalVal
-            elif item in ("Z",):
-                resttotalVal = module3(val, 50)
-                totalVal = totalVal + resttotalVal
-            elif item in ("S",):
+            elif item in ("S","T","X","Y","Z"):
                 resttotalVal = module3(val, 30)
+                totalVal = totalVal + resttotalVal
+                if item in ("Z",):
+                resttotalVal = module3(val, 50)
                 totalVal = totalVal + resttotalVal
             elif item in ("D"):
                 resttotalVal = module3(val, 15)
