@@ -77,6 +77,7 @@ def module3(qty,price):
     return qty*price
 
 def module4(qty,val,price):
+    import math
     retVal=0
     print("Val",val)
     print("qty", qty)
@@ -91,7 +92,7 @@ def module4(qty,val,price):
         reminder = val % qty
         print("FdivVal",FdivVal)
         print("reminder", reminder)
-        if FdivVal==1:
+        if FdivVal==1 and reminder==1:
             retVal=qty*price
         elif reminder != 0:
             retVal = ((FdivVal + 1) * price)
