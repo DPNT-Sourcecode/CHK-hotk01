@@ -52,6 +52,8 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         retVal1=module5(OrigOfferCnt, b_new_val, OrigOfferPrice, origBasePrice)
         print ("b_new_val",b_new_val)
         print ("retVal1",retVal1)
+        print ("OrigOfferPrice",OrigOfferPrice)
+        print ("OrigOfferCnt", OrigOfferCnt)
 
     elif val > baseCnt:
         # print(3)
@@ -158,7 +160,7 @@ def checkout(skus):
                 QtotalVal = module5(3, q_val, 80, 30)
             elif item =='R':
                 QtotalVal=0
-                RtotalVal ,QtotalVal=moodule2(val,3,50,q_val,30,80,1)
+                RtotalVal ,QtotalVal=moodule2(val,3,50,q_val,30,80,3)
             elif item == "U":
                 UtotalVal=module4(3,val,40)
             elif item  in ("W","T","G","C"):
@@ -193,7 +195,7 @@ def checkout(skus):
 
 
 
-ret = checkout("RRRQQ")
+ret = checkout("RRRQQQQ")
 print (ret)
 
 # 200+130+50
