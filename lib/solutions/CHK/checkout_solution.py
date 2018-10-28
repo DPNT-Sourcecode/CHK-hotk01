@@ -188,7 +188,7 @@ def checkout(skus):
                     YtotalVal = module5(3, val, 45, 20)
                 elif item == 'Z':
                     ZtotalVal = module5(3, val, 45, 21)
-                totalVal = totalVal + resttotalVal
+                # totalVal = totalVal + resttotalVal
                 # if item in ("Z",):
                 # resttotalVal = module3(val, 50)
                 # totalVal = totalVal + resttotalVal
@@ -225,7 +225,7 @@ def checkout(skus):
 
 
 
-ret = checkout("X")
+ret = checkout("XXXYYYY")
 print (ret)
 
 # 200+130+50
