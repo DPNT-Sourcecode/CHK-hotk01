@@ -105,7 +105,7 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
         if reminder==0:
             retVal=indVal*45
         elif z_val>0 and s_val>0 and x_val==0:
-            if z_val>s_val or z_val==s_val:
+            if z_val>s_val or z_val==s_val or z_val<s_val :
                 print ("indVal",indVal)
                 print ("reminder",reminder)
                 ZtotalVal=module5(3, (indVal*3), 45, 21)
