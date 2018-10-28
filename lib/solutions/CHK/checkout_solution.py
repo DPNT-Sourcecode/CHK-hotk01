@@ -62,6 +62,8 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
 def module3(qty,price):
     return qty*price
 
+def module5
+
 def module4(qty,val,price):
     import math
     retVal=0
