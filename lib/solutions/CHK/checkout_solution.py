@@ -163,9 +163,12 @@ def checkout(skus):
             elif item in ("S",):
                 resttotalVal = module3(val, 30)
                 totalVal = totalVal + resttotalVal
-            elif item in ("M","D"):
+            elif item in ("D"):
                 resttotalVal = module3(val, 15)
                 totalVal = totalVal + resttotalVal
+            elif item in ("M"):
+                m_val = val
+                MtotalVal = module3
             elif item in ("I",):
                 resttotalVal = module3(val, 35)
                 totalVal = totalVal + resttotalVal
@@ -176,12 +179,12 @@ def checkout(skus):
                 return -1
 
             #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal
 
 
 
-# ret = checkout("EEBB")
-# print (ret)
+ret = checkout("M")
+print (ret)
 
 # 200+130+50
 
