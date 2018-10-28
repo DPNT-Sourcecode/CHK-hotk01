@@ -94,6 +94,8 @@ def module5(qty,val,price,basePrice):
     return  retVal
 
 def module6(z_val,z_price,x_val, x_price,s_val,s_price):
+    if z_val>(s_val+x_val):
+        retVal=module5(3,z_val,45,basePrice)
     if x_val==0 and s_val>0:
         retVal=(z_val-s_val)
     elif x_val>0 and s_val>0:
@@ -136,6 +138,9 @@ def checkout(skus):
     XtotalVal = 0
     YtotalVal = 0
     ZtotalVal = 0
+    s_val=0
+    x_val=0
+    z_val=0
     ValCnt = 0
     m_val=0
     if not lis:
@@ -193,13 +198,15 @@ def checkout(skus):
                 print ("ValCnt",ValCnt)
                 if item in ("S","T","Y"):
                     s_val=s_val+val
-                    StotalVal = module5(3, val, 45, 20)
+                    # StotalVal = module5(3, val, 45, 20)
                 elif item == 'X':
-                    XtotalVal = module5(3, val, 45, 17)
+                    x_val=val
+                    # XtotalVal = module5(3, val, 45, 17)
                 elif item == 'Z':
-                    ZtotalVal = module5(3, val, 45, 21)
-                    reminder = val%3
-                    print("reminder",reminder)
+                    z_val=val
+                    # ZtotalVal = module5(3, val, 45, 21)
+                    # reminder = val%3
+                    # print("reminder",reminder)
                 # totalVal = totalVal + resttotalVal
                 # if item in ("Z",):
                 # resttotalVal = module3(val, 50)
