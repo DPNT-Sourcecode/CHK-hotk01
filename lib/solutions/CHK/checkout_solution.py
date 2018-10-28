@@ -198,19 +198,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         if len(lis)>=3:
             if (cntr+1)%3==0 and cntr!=0:
              val= val+45
-             NextVal=cntr
-             print("NextVal",NextVal)
-             print("NextVal",lis[NextVal])
-            elif lis[NextVal]=='s' and NextVal!=0:
-             val= val+s_price
-             NextVal=NextVal+1
-            elif lis[NextVal]=='x' and NextVal!=0:
-             val= val+x_price
-             NextVal = NextVal + 1
-            elif lis[NextVal]=='z' and NextVal!=0:
-             val= val+z_price
-             NextVal = NextVal + 1
-            print("VAL", val)
+             print('finalVal',finalVal)
             cntr = cntr + 1
         else:
             if finalVal=='s':
