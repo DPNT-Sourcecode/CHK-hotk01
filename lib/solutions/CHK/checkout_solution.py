@@ -79,9 +79,9 @@ def module3(qty,price):
 def module4(qty,val,price):
     retVal=0
     if (val < qty and val > 0):
-        BtotalVal = (price * val)
+        retVal = (price * val)
     elif val == qty:
-        FtotalVal = (price * 2)
+        retVal = (price * 2)
     elif val > qty:
         # indVal = int(math.floor(val/ 2))
         FdivVal = (val / qty)
@@ -93,8 +93,8 @@ def module4(qty,val,price):
             FtotalVal = ((FdivVal + 1) * price)
         else:
             # print("else")
-            FtotalVal = ((FdivVal + 1) * price)
-    return FtotalVal
+            retVal = ((FdivVal + 1) * price)
+    return retVal
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -117,6 +117,7 @@ def checkout(skus):
     HtotalVal = 0
     VtotalVal = 0
     EtotalVal =0
+    UtotalVal = 0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -145,10 +146,10 @@ def checkout(skus):
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
-            elif item == 'F':
+            elif item == "F":
                 FtotalVal=module4(2,val,10)
-            elif item == 'U':
-                FtotalVal=module4(3,val,40)
+            elif item == "U":
+                UtotalVal=module4(3,val,40)
             elif item  in ("W","T","G","C"):
                 resttotalVal=module3(val,20)
                 totalVal=totalVal+resttotalVal
