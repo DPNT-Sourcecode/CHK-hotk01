@@ -116,6 +116,7 @@ def checkout(skus):
     RtotalVal=0
     MtotalVal=0
     NtotalVal=0
+    m_val=0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -199,8 +200,8 @@ def checkout(skus):
 
 
 
-# ret = checkout("MMMNNNNNN")
-# print (ret)
+ret = checkout("NN")
+print (ret)
 
 # 200+130+50
 
