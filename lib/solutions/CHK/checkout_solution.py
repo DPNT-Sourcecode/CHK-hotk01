@@ -191,14 +191,11 @@ def checkout(skus):
                 # resttotalVal = module3(val, 30)
                 ValCnt=ValCnt+val
                 print ("ValCnt",ValCnt)
-                if item=='S':
+                if item in ("S","T","Y"):
+                    s_val=s_val+val
                     StotalVal = module5(3, val, 45, 20)
-                elif item == 'T':
-                    TtotalVal = module5(3, val, 45, 20)
                 elif item == 'X':
                     XtotalVal = module5(3, val, 45, 17)
-                elif item == 'Y':
-                    YtotalVal = module5(3, val, 45, 20)
                 elif item == 'Z':
                     ZtotalVal = module5(3, val, 45, 21)
                     reminder = val%3
