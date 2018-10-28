@@ -122,6 +122,11 @@ def checkout(skus):
     RtotalVal=0
     MtotalVal=0
     NtotalVal=0
+    StotalVal = 0
+    TtotalVal = 0
+    XtotalVal = 0
+    YtotalVal = 0
+    ZtotalVal = 0
     m_val=0
     if not lis:
         return 0
@@ -172,7 +177,17 @@ def checkout(skus):
                 resttotalVal = module3(val, 10)
                 totalVal = totalVal + resttotalVal
             elif item in ("S","T","X","Y","Z"):
-                resttotalVal = module3(val, 30)
+                # resttotalVal = module3(val, 30)
+                if item=='S':
+                    StotalVal = module5(3, val, 45, 50)
+                elif item == 'T':
+                    TtotalVal = module5(3, val, 45, 50)
+                elif item == 'X':
+                    XtotalVal = module5(3, val, 45, 50)
+                elif item == 'Y':
+                    YtotalVal = module5(3, val, 45, 50)
+                elif item == 'Z':
+                    ZtotalVal = module5(3, val, 45, 50)
                 totalVal = totalVal + resttotalVal
                 # if item in ("Z",):
                 # resttotalVal = module3(val, 50)
@@ -206,7 +221,7 @@ def checkout(skus):
                 return -1
 
             #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+StotalVal+TtotalVal+XtotalVal+YtotalVal+ZtotalVal
 
 
 
