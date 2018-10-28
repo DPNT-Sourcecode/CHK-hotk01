@@ -48,15 +48,11 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         retVal = (val * basePrice)
         # print (totalVal)
         b_new_val = (origVal - 1)
-        if (b_new_val < OrigOfferCnt and b_new_val > 0):
-            # print (b_new_val)
-            retVal1 = (b_new_val * origBasePrice)
-        elif (b_new_val > OrigOfferCnt):
-            reminder = b_new_val % OrigOfferCnt
-            indVal = int(math.floor(b_new_val / OrigOfferCnt))
-            retVal1 = ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
-        elif (b_new_val == OrigOfferCnt):
-            retVal1 = OrigOfferPrice
+
+        retVal1=module5(OrigOfferCnt, b_new_val, OrigOfferPrice, origBasePrice)
+        print ("b_new_val",b_new_val)
+        print ("retVal1",retVal1)
+
     elif val > baseCnt:
         # print(3)
         retVal = (val * basePrice)
