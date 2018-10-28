@@ -93,6 +93,15 @@ def module5(qty,val,price,basePrice):
         retVal = ((indVal * price) + (reminder * basePrice))
     return  retVal
 
+def module6(z_val,z_price,x_val, x_price,s_val,s_price):
+    if x_val==0 and s_val>0:
+        retVal=(z_val-s_val)
+    elif x_val>0 and s_val>0:
+        null
+    elif x_val >0 and s_val==0
+
+
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
