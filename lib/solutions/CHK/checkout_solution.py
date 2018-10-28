@@ -98,6 +98,7 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
     print (totalVal)
     ZtotalVal=0
     StotalVal=0
+    XtotalVal=0
     retVal=0
     if totalVal>=3:
         reminder=totalVal%3
@@ -105,15 +106,17 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
         if reminder==0:
             retVal=indVal*45
         elif z_val>0 and s_val>0 and x_val==0:
-            if z_val>s_val or z_val==s_val or z_val<s_val :
-                print ("indVal",indVal)
-                print ("reminder",reminder)
-                ZtotalVal=module5(3, (indVal*3), 45, 21)
-                StotalVal = module5(3, reminder, 45, 20)
-                retVal=ZtotalVal+StotalVal
-            elif z_val<s_val:
-                print ("indVal", indVal)
-                print ("reminder", reminder)
+            print ("indVal",indVal)
+            print ("reminder",reminder)
+            ZtotalVal=module5(3, (indVal*3), 45, 21)
+            StotalVal = module5(3, reminder, 45, 20)
+            retVal=ZtotalVal+StotalVal
+        elif z_val>0 and s_val==0 and x_val>0:
+            print ("indVal", indVal)
+            print ("reminder", reminder)
+            ZtotalVal = module5(3, (indVal * 3), 45, 21)
+            XtotalVal = module5(3, reminder, 45, 17)
+            retVal = ZtotalVal + XtotalVal
 
     return retVal
 
@@ -262,7 +265,7 @@ def checkout(skus):
 
 
 
-ret = checkout("SSSSZZZZ")
+ret = checkout("XXZZZ")
 print (ret)
 
 # 200+130+50
