@@ -136,6 +136,7 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
 
         elif s_val>0 and x_val==0:
             print ("reminder", reminder)
+            print ("indVal", indVal)
             print ("ZtotalVal", ZtotalVal)
             print ("StotalVal", StotalVal)
             print ("XtotalVal", XtotalVal)
