@@ -117,6 +117,12 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
             ZtotalVal = module5(3, (indVal * 3), 45, 21)
             XtotalVal = module5(3, reminder, 45, 17)
             retVal = ZtotalVal + XtotalVal
+        elif z_val>0 and s_val>0 and x_val>0:
+            print ("indVal", indVal)
+            print ("reminder", reminder)
+            ZtotalVal = module5(3, (indVal * 3), 45, 21)
+            XtotalVal = module5(3, reminder, 45, 17)
+            retVal = ZtotalVal + XtotalVal
 
     return retVal
 
