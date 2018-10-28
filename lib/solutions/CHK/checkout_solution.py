@@ -197,12 +197,12 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     for x in range(x_val):
         lis.append("x")
     for finalVal in lis:
-        print (finalVal)
+        # print (finalVal)
         if len(lis)>=3:
             if (cntr+1)%3==0 and cntr!=0:
              val= val+45
-             print('finalVal',finalVal)
-             print('cntr', cntr)
+             # print('finalVal',finalVal)
+             # print('cntr', cntr)
              sTempPrice = 0
              xTempPrice = 0
              zTempPrice = 0
@@ -213,10 +213,10 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             elif lis[cntr]=='z' and cntr>2 and (cntr+1)%3>0:
                 zTempPrice = zTempPrice + z_price
             cntr = cntr + 1
-            print ("sTempPrice",sTempPrice)
-            print ("xTempPrice",xTempPrice)
-            print ("zTempPrice",zTempPrice)
-            print ("val", val)
+            # print ("sTempPrice",sTempPrice)
+            # print ("xTempPrice",xTempPrice)
+            # print ("zTempPrice",zTempPrice)
+            # print ("val", val)
                   #
         else:
             if finalVal=='s':
@@ -227,8 +227,8 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
              val= val+z_price
 
     val = sTempPrice + xTempPrice + zTempPrice + val
-    print ("val",val)
-    print(lis)
+    # print ("val",val)
+    # print(lis)
     return val
 
 # noinspection PyUnusedLocal
@@ -375,7 +375,7 @@ def checkout(skus):
 
 
 
-ret = checkout("SSSS")
+ret = checkout("CXYZYZC")
 print (ret)
 
 # 200+130+50
