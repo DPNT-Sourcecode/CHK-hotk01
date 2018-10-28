@@ -199,7 +199,9 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
          val= val+45
         elif finalVal=='s':
          val= val+20
-    print (val)
+        elif finalVal=='x':
+         val= val+17
+    print ("val",val)
     print(lis)
 
 # noinspection PyUnusedLocal
