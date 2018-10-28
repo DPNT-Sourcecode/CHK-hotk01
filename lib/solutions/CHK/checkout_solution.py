@@ -73,6 +73,8 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
             retVal1 = origBasePrice
     return retVal,retVal1
 
+def module3(qty,price):
+    return qty*price
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -146,6 +148,9 @@ def checkout(skus):
                     else:
                         # print("else")
                         FtotalVal = ((FdivVal+1) * 10)
+            elif item  in idealVal:
+                resttotalVal=module3()
+                
             elif item not in idealVal:
                 return -1
 
