@@ -32,12 +32,12 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
     retVal1 = 0
     #BtotalVal = 0
     if val < baseCnt:
-        print(189)
+        # print(189)
         retVal = (val * basePrice)
         b_new_val = (origVal - 1)
         retVal1 = module5(OrigOfferCnt, origVal, OrigOfferPrice, origBasePrice)
     elif val == baseCnt:
-        print(2)
+        # print(2)
         retVal = (val * basePrice)
         print ("retVal",retVal)
         b_new_val = (origVal - 1)
@@ -195,13 +195,12 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         lis.append("x")
     for finalVal in lis:
         print (finalVal)
-        if len(lis)>3:
-            cntr=cntr+1
+        if len(lis)>=3:
             if cntr%3==0:
              val= val+45
              NextVal=cntr
-             print("NextVal",NextVal)
-             print("NextVal",lis[NextVal])
+             # print("NextVal",NextVal)
+             # print("NextVal",lis[NextVal])
             elif lis[NextVal]=='s' and NextVal!=0:
              val= val+s_price
              NextVal=NextVal+1
@@ -211,6 +210,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             elif lis[NextVal]=='z' and NextVal!=0:
              val= val+z_price
              NextVal = NextVal + 1
+            cntr = cntr + 1
         else:
             if finalVal=='s':
              val= val+s_price
@@ -361,13 +361,13 @@ def checkout(skus):
             #totalVal=A_sum+B_sum
             # +StotalVal + TtotalVal + XtotalVal + YtotalVal + ZtotalVal
         # ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
-        x = module7(z_val, 21, x_val, 17, s_val, 20)
+        ZtotalVal = module7(z_val, 21, x_val, 17, s_val, 20)
         print ("ZtotalVal",ZtotalVal)
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+ZtotalVal
 
 
 
-ret = checkout("SX")
+ret = checkout("SSS")
 print (ret)
 
 # 200+130+50
