@@ -41,8 +41,8 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         retVal = (val * basePrice)
         print ("retVal",retVal)
         b_new_val = (origVal - 1)
-
-        retVal1=module5(OrigOfferCnt, b_new_val, OrigOfferPrice, origBasePrice)
+        if b_new_val>0:
+            retVal1=module5(OrigOfferCnt, b_new_val, OrigOfferPrice, origBasePrice)
         # print ("b_new_val",b_new_val)
         # print ("retVal1",retVal1)
         # print ("OrigOfferPrice",OrigOfferPrice)
@@ -207,7 +207,7 @@ def checkout(skus):
 
 
 
-ret = checkout("EEBB")
+ret = checkout("EEBBBB")
 print (ret)
 
 # 200+130+50
