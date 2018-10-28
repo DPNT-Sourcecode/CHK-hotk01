@@ -90,6 +90,8 @@ def module4(qty,val,price):
         retVal=(priceToPaid*price)+(qty*price)
     return retVal
 
+def module4
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
