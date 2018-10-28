@@ -196,7 +196,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     for finalVal in lis:
         print (finalVal)
         if len(lis)>=3:
-            if cntr%3==0:
+            if cntr%3==0 and cntr!=0:
              val= val+45
              NextVal=cntr
              print("NextVal",NextVal)
@@ -210,6 +210,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             elif lis[NextVal]=='z' and NextVal!=0:
              val= val+z_price
              NextVal = NextVal + 1
+            print("VAL", val)
             cntr = cntr + 1
         else:
             if finalVal=='s':
