@@ -198,9 +198,11 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         if cntr%3==0:
          val= val+45
         elif finalVal=='s':
-         val= val+20
+         val= val+s_price
         elif finalVal=='x':
-         val= val+17
+         val= val+x_price
+        elif finalVal=='z':
+         val= val+z_price
     print ("val",val)
     print(lis)
 
