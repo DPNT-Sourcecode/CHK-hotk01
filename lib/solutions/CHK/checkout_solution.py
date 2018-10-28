@@ -139,8 +139,10 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
                     XtotalVal = module5(3, reminder, 45, 17)
                     retVal=ZtotalVal+StotalVal+XtotalVal
             else:
-                
-                XtotalVal = module5(3, reminder, 45, 17)
+                if x_val>0 and x_val<3:
+                    XtotalVal = module5(3, x_val, 45, 17)
+                elif s_val > 0 and s_val < 3:
+                    StotalVal = module5(3, s_val, 45, 20)
                 print ("XtotalVal", XtotalVal)
                 retVal = ZtotalVal + StotalVal + XtotalVal
 
