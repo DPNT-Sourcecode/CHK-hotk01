@@ -186,8 +186,12 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     lis=[]
     for z in range(z_val):
         lis.append("z")
-        for s in range(s_val):
-            lis.append("s")
+    for s in range(s_val):
+        lis.append("s")
+    for x in range(x_val):
+        lis.append("x")
+    for finalVal in lis:
+        print (finalVal)
     print(lis)
 
 # noinspection PyUnusedLocal
