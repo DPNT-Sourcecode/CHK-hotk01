@@ -184,6 +184,8 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
 
 def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     lis=[]
+    cntr=0
+    val=0
     for z in range(z_val):
         lis.append("z")
     for s in range(s_val):
@@ -192,6 +194,10 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         lis.append("x")
     for finalVal in lis:
         print (finalVal)
+        cntr=cntr+1
+        if cntr%3==0:
+         val= val+45  
+    print (val)
     print(lis)
 
 # noinspection PyUnusedLocal
