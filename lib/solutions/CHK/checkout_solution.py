@@ -71,9 +71,11 @@ def module4(qty,val,price):
         retVal = (price * qty)
     elif val > qty:
         # indVal = int(math.floor(val/ 2))
-        reminder = val % (qty+1)
+        reminder = val /(qty+1)
         print("reminder",reminder)
+        print("val", val)
         priceToPaid=(((qty+1)*reminder)-(qty*reminder))
+        print("priceToPaid", priceToPaid)
         retVal=(priceToPaid*price)+(qty*price)
     return retVal
 
