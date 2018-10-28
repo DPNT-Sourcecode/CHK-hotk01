@@ -199,8 +199,8 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             if cntr%3==0:
              val= val+45
              NextVal=cntr
-             # print("NextVal",NextVal)
-             # print("NextVal",lis[NextVal])
+             print("NextVal",NextVal)
+             print("NextVal",lis[NextVal])
             elif lis[NextVal]=='s' and NextVal!=0:
              val= val+s_price
              NextVal=NextVal+1
@@ -219,8 +219,8 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
             elif finalVal=='z':
              val= val+z_price
 
-    print ("val",val)
-    print(lis)
+    # print ("val",val)
+    # print(lis)
     return val
 
 # noinspection PyUnusedLocal
@@ -362,12 +362,12 @@ def checkout(skus):
             # +StotalVal + TtotalVal + XtotalVal + YtotalVal + ZtotalVal
         # ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
         ZtotalVal = module7(z_val, 21, x_val, 17, s_val, 20)
-        print ("ZtotalVal",ZtotalVal)
+        # print ("ZtotalVal",ZtotalVal)
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+ZtotalVal
 
 
 
-ret = checkout("SSS")
+ret = checkout("XYZYZ")
 print (ret)
 
 # 200+130+50
