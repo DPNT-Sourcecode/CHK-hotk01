@@ -95,18 +95,15 @@ def module5(qty,val,price,basePrice):
 
 def module6(z_val,z_price,x_val, x_price,s_val,s_price):
     totalVal= z_val+x_val+s_val
-    reminder=totalVal%3
-    indVal=totalVal/3
-    if reminder==0:
-        retVal=indVal*45
-    elif z_val>(s_val+x_val):
-        retVal=module5(3,z_val,45,z_price)
-    elif x_val==0 and s_val>0:
-        retVal=(z_val-s_val)
-    elif x_val>0 and s_val>0:
-        retVal=0
-    elif x_val >0 and s_val==0:
-        retVal=0
+    if totalVal>3:
+        reminder=totalVal%3
+        indVal=totalVal/3
+        if reminder==0:
+            retVal=indVal*45
+        elif z_val>0 and s_val>0 and x_val==0:
+            if z_val>s_val:
+                
+
     return retVal
 
 
