@@ -78,6 +78,9 @@ def module3(qty,price):
 
 def module4(qty,val,price):
     retVal=0
+    print("Val",val)
+    print("qty", qty)
+    print (price)
     if (val < qty and val > 0):
         retVal = (price * val)
     elif val == qty:
@@ -178,11 +181,11 @@ def checkout(skus):
                 return -1
 
             #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal
 
 
 
-ret = checkout("U")
+ret = checkout("UUUU")
 print (ret)
 
 # 200+130+50
