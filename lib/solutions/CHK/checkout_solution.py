@@ -123,9 +123,11 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
             # print ("reminder", reminder)
             ZtotalVal = module5(3, (indVal * 3), 45, 21)
             print ("ZtotalVal", ZtotalVal)
+            print ("s_val",s_val)
+            print ("x_val", x_val)
             totalVal=s_val+x_val
             if totalVal>3:
-                # print ("IN IF CHK")
+                print ("IN IF CHK")
                 reminder = totalVal % 3
                 indVal = totalVal / 3
                 if reminder == 0:
@@ -137,7 +139,9 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
                     XtotalVal = module5(3, reminder, 45, 17)
                     retVal=ZtotalVal+StotalVal+XtotalVal
             else:
+                
                 XtotalVal = module5(3, reminder, 45, 17)
+                print ("XtotalVal", XtotalVal)
                 retVal = ZtotalVal + StotalVal + XtotalVal
 
         elif s_val>0 and x_val==0 and z_val==0:
