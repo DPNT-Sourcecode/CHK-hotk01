@@ -191,10 +191,12 @@ def checkout(skus):
             elif item in ("N"):
                 MtotalVal=0
                 NtotalVal = module3(val, 40)
+                print ("NtotalVal",NtotalVal)
                 if val>=3:
-                    # print("if")
+                    print("if")
                     qtyReduce=m_val-(val/3)
-                    MtotalVal=module3(qtyReduce,15)
+                    if qtyReduce>0:
+                        MtotalVal=module3(qtyReduce,15)
                 else:
                     MtotalVal =module3(m_val,15)
                 # print("MtotalVal",MtotalVal)
@@ -207,7 +209,7 @@ def checkout(skus):
 
 
 
-# ret = checkout("EEBBBB")
+# ret = checkout("NNNMM")
 # print (ret)
 
 # 200+130+50
