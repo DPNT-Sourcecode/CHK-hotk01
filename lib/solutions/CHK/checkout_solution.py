@@ -76,7 +76,26 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
 def module3(qty,price):
     return qty*price
 
-def module4(qty,val)
+def module4(qty,val,price):
+    retVal=0
+    if (val < qty and val > 0):
+        BtotalVal = (price * val)
+    elif val == qty:
+        FtotalVal = (price * 2)
+    elif val > qty:
+        # indVal = int(math.floor(val/ 2))
+        FdivVal = (val / qty)
+        reminder = val % qty
+        # print(FdivVal)
+        # print(reminder)
+        # reminder = int(math.floor(reminder)) + 1
+        if reminder != 0:
+            FtotalVal = ((FdivVal + 1) * price)
+        else:
+            # print("else")
+            FtotalVal = ((FdivVal + 1) * price)
+    return FtotalVal
+
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
@@ -126,25 +145,10 @@ def checkout(skus):
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
-
             elif item == 'F':
-                if (val<2 and val>0):
-
-                    BtotalVal=(10*val)
-                elif val==2:
-                     FtotalVal=(10*2)
-                elif val > 2:
-                    # indVal = int(math.floor(val/ 2))
-                    FdivVal = (val/2)
-                    reminder= val%2
-                    # print(FdivVal)
-                    # print(reminder)
-                    #reminder = int(math.floor(reminder)) + 1
-                    if reminder!=0:
-                        FtotalVal=((FdivVal+1)*10)
-                    else:
-                        # print("else")
-                        FtotalVal = ((FdivVal+1) * 10)
+                FtotalVal=module4(2,val,10)
+            elif item == 'U':
+                FtotalVal=module4(3,val,40)
             elif item  in ("W","T","G","C"):
                 resttotalVal=module3(val,20)
                 totalVal=totalVal+resttotalVal
@@ -177,7 +181,7 @@ def checkout(skus):
 
 
 
-ret = checkout("EBBBEEE")
+ret = checkout("U")
 print (ret)
 
 # 200+130+50
