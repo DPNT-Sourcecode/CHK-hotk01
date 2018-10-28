@@ -212,13 +212,12 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
              val= val+z_price
              NextVal = NextVal + 1
         else:
-            if lis[cntr]=='s' and cntr!=0:
+            if finalVal=='s':
              val= val+s_price
-            elif lis[cntr]=='x' and cntr!=0:
+            elif finalVal=='x':
              val= val+x_price
-            elif lis[cntr]=='z' and cntr!=0:
+            elif finalVal=='z':
              val= val+z_price
-             cntr=cntr+1
 
     print ("val",val)
     print(lis)
@@ -361,7 +360,7 @@ def checkout(skus):
 
             #totalVal=A_sum+B_sum
             # +StotalVal + TtotalVal + XtotalVal + YtotalVal + ZtotalVal
-        ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
+        # ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
         x = module7(z_val, 21, x_val, 17, s_val, 20)
         print ("ZtotalVal",ZtotalVal)
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+ZtotalVal
