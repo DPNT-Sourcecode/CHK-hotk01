@@ -29,6 +29,7 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
 def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOfferCnt): #2f 1 b
     import math
     retVal=0
+    retVal1 = 0
     #BtotalVal = 0
     if val < baseCnt:
         print(1)
@@ -124,7 +125,9 @@ def checkout(skus):
                 totalVal = (val * 15)+totalVal
             elif item =='E':
                 BtotalVal=0
-                EtotalVal ,BtotalVal=moodule2(val,2,40,2,45,30,1)
+                EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,45,30,1)
+                print(EtotalVal)
+                print(BtotalVal)
             elif item == 'F':
                 if (val<2 and val>0):
                     print(1)
