@@ -32,17 +32,10 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
     retVal1 = 0
     #BtotalVal = 0
     if val < baseCnt:
-        # print(189)
+        print(189)
         retVal = (val * basePrice)
-        # totalVal = (b_val * 30) + totalVal
-        if (origVal < OrigOfferCnt and origVal > 0):
-            retVal1 = (origVal * origBasePrice)
-        elif (origVal > 0):
-            reminder = origVal % OrigOfferCnt
-            indVal = int(math.floor(origVal / OrigOfferCnt))
-            retVal1 = ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
-        elif (origVal == OrigOfferCnt):
-            retVal1 = OrigOfferPrice
+        b_new_val = (origVal - 1)
+        retVal1 = module5(OrigOfferCnt, origVal, OrigOfferPrice, origBasePrice)
     elif val == baseCnt:
         print(2)
         retVal = (val * basePrice)
@@ -56,9 +49,11 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         print ("OrigOfferCnt", OrigOfferCnt)
 
     elif val > baseCnt:
-        # print(3)
+        print(3)
         retVal = (val * basePrice)
-        
+        b_new_val = (origVal - 1)
+        retVal1 = module5(OrigOfferCnt, b_new_val, OrigOfferPrice, origBasePrice)
+
     return retVal,retVal1
 
 def module3(qty,price):
@@ -138,7 +133,7 @@ def checkout(skus):
                  BtotalVal=module5(2,b_val,45,30)
             elif item =='E':
                 BtotalVal=0
-                EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
+                EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,2)
             elif item == "F":
                 FtotalVal=module4(2,val,10)
             elif item =='K':
