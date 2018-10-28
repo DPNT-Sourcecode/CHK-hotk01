@@ -127,11 +127,10 @@ def checkout(skus):
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
-                print(EtotalVal)
-                print(BtotalVal)
+
             elif item == 'F':
                 if (val<2 and val>0):
-                    print(1)
+
                     BtotalVal=(10*val)
                 elif val==2:
                      FtotalVal=(10*2)
