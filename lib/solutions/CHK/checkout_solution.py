@@ -123,6 +123,7 @@ def checkout(skus):
     VtotalVal = 0
     EtotalVal =0
     UtotalVal = 0
+    KtotalVal = 0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -148,6 +149,8 @@ def checkout(skus):
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
             elif item == "F":
                 FtotalVal=module4(2,val,10)
+            elif item =='K':
+                 KtotalVal=module5(2,val,150,80)
             elif item == "U":
                 UtotalVal=module4(3,val,40)
             elif item  in ("W","T","G","C"):
@@ -178,11 +181,11 @@ def checkout(skus):
                 return -1
 
             #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal
 
 
 
-ret = checkout("BBBBB")
+ret = checkout("KKK")
 print (ret)
 
 # 200+130+50
