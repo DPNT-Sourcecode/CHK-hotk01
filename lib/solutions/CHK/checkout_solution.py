@@ -201,14 +201,18 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
          NextVal=cntr
          print("NextVal",NextVal)
          print("NextVal",lis[NextVal])
-        elif lis[NextVal]=='s':
+        elif lis[NextVal]=='s' and NextVal!=0:
          val= val+s_price
-        elif lis[NextVal]=='x':
+         NextVal=NextVal+1
+        elif lis[NextVal]=='x' and NextVal!=0:
          val= val+x_price
-        elif lis[NextVal]=='z':
+         NextVal = NextVal + 1
+        elif lis[NextVal]=='z' and NextVal!=0:
          val= val+z_price
+         NextVal = NextVal + 1
     print ("val",val)
     print(lis)
+    return val
 
 # noinspection PyUnusedLocal
 # skus = unicode string
