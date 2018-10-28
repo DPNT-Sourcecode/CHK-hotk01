@@ -187,6 +187,9 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     cntr=0
     val=0
     NextVal=0
+    sTempPrice=0
+    xTempPrice=0
+    zTempPrice=0
     for z in range(z_val):
         lis.append("z")
     for s in range(s_val):
