@@ -183,7 +183,8 @@ def checkout(skus):
             elif item in ("N"):
                 MtotalVal=0
                 NtotalVal = module3(val, 40)
-                MtotalVal=module4(3,m_val,14)
+                MtotalVal=module4(3,val,15)
+                print("MtotalVal",MtotalVal)
             elif item not in idealVal:
                 return -1
 
