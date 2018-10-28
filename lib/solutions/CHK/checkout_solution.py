@@ -32,19 +32,19 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
     #BtotalVal = 0
     if val < baseCnt:
         print(1)
-        retVal = (val * basePrice) + totalVal
+        retVal = (val * basePrice)
         # totalVal = (b_val * 30) + totalVal
-        if (b_val < 2 and b_val > 0):
-            totalVal = (b_val * 30) + totalVal
-        elif (b_val > 0):
-            reminder = b_val % 2
-            indVal = int(math.floor(b_val / 2))
-            totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
-        elif (b_val == 2):
-            totalVal = 45 + totalVal
-    elif val == 2:
+        if (origVal < OrigOfferCnt and origVal > 0):
+            totalVal = (origVal * origBasePrice)
+        elif (origVal > 0):
+            reminder = origVal % OrigOfferCnt
+            indVal = int(math.floor(origVal / OrigOfferCnt))
+            totalVal = ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
+        elif (origVal == OrigOfferCnt):
+            totalVal = OrigOfferPrice
+    elif val == baseCnt:
         print(2)
-        totalVal = (val * 40) + totalVal
+        totalVal = (val * 40)
         # print (totalVal)
         b_new_val = (b_val - 1)
         if (b_new_val < 2 and b_new_val > 0):
@@ -66,9 +66,9 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         elif (b_new_val > 2):
             reminder = b_new_val % 2
             indVal = int(math.floor(b_new_val / 2))
-            totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+            retVal1= ((indVal * 45) + (reminder * 30)) + totalVal
         elif (b_new_val == 2):
-            totalVal = 45 + totalVal
+            retVal1 = 45
 
 
 
