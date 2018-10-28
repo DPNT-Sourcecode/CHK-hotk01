@@ -62,7 +62,6 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         retVal = (val * basePrice)
         indVal = int(math.floor(val / baseCnt))
         b_new_val = (origVal - indVal)
-        print (b_new_val)
         print ("OrigOfferCnt",OrigOfferCnt)
         if (b_new_val < OrigOfferCnt and b_new_val > 0):
             retVal1 = (b_new_val * origBasePrice)
@@ -71,7 +70,7 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
             indVal = int(math.floor(b_new_val / OrigOfferCnt))
             retVal1= ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
         elif (b_new_val == OrigOfferCnt):
-            retVal1 = OrigOfferCnt
+            retVal1 = origBasePrice
     return retVal,retVal1
 
 
@@ -127,7 +126,7 @@ def checkout(skus):
                 totalVal = (val * 15)+totalVal
             elif item =='E':
                 BtotalVal=0
-                EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,45,30,1)
+                EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
                 print(EtotalVal)
                 print(BtotalVal)
             elif item == 'F':
@@ -156,7 +155,7 @@ def checkout(skus):
 
 
 
-ret = checkout("EBBEE")
+ret = checkout("EBBBEEE")
 print (ret)
 
 # 200+130+50
