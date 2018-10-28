@@ -124,8 +124,7 @@ def checkout(skus):
                 totalVal = (val * 15)+totalVal
             elif item =='E':
                 BtotalVal=0
-                VtotalVal ,BtotalVal=moodule2()
-
+                EtotalVal ,BtotalVal=moodule2(val,2,40,2,45,30,1)
             elif item == 'F':
                 if (val<2 and val>0):
                     print(1)
@@ -148,11 +147,11 @@ def checkout(skus):
                 return -1
 
         #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal
 
 
 
-ret = checkout("HHHHHHHHHHHHHHHH")
+ret = checkout("E")
 print (ret)
 
 # 200+130+50
