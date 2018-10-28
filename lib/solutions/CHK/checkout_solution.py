@@ -174,9 +174,9 @@ def checkout(skus):
             elif item in ("S","T","X","Y","Z"):
                 resttotalVal = module3(val, 30)
                 totalVal = totalVal + resttotalVal
-                if item in ("Z",):
-                resttotalVal = module3(val, 50)
-                totalVal = totalVal + resttotalVal
+                # if item in ("Z",):
+                # resttotalVal = module3(val, 50)
+                # totalVal = totalVal + resttotalVal
             elif item in ("D"):
                 resttotalVal = module3(val, 15)
                 totalVal = totalVal + resttotalVal
