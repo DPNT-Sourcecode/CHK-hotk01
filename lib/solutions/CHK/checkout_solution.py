@@ -26,15 +26,15 @@ def module1(val,sku1,price1,sku2,price2,baseprice):
 
     return retVal
 
-def moodule2(val,baseCnt,basePrice,origVal):
+def moodule2(val,baseCnt,basePrice,origVal,origBasePrice):
     retVal=0
     if val < baseCnt:
        print(1)
-       retVal = (val * 40)
+       retVal = (val * basePrice)
             # totalVal = (b_val * 30) + totalVal
-        if(b_val < 2 and b_val > 0):
-                totalVal = (b_val * 30) + totalVal
-        elif (b_val > 0):
+       if(origVal < 2 and origVal > 0):
+            retVal = (origVal * origBasePrice)
+        elif (origVal > 0):
                 reminder = b_val % 2
                 indVal = int(math.floor(b_val / 2))
                 totalVal = ((indVal * 45) + (reminder * 30)) + totalVal
