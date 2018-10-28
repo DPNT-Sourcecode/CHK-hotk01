@@ -134,12 +134,35 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
                     XtotalVal = module5(3, reminder, 45, 17)
                     retVal=ZtotalVal+StotalVal+XtotalVal
 
-        elif s_val>0 and x_val==0:
+        elif s_val>0 and x_val==0 and z_val==0:
             print ("reminder", reminder)
             print ("indVal", indVal)
             print ("ZtotalVal", ZtotalVal)
             print ("StotalVal", StotalVal)
             print ("XtotalVal", XtotalVal)
+            StotalVal = module5(3,s_val, 45, 20)
+            XtotalVal = module5(3, reminder, 45, 17)
+            retVal=StotalVal
+        elif s_val==0 and x_val>0 and z_val==0:
+            print ("reminder", reminder)
+            print ("indVal", indVal)
+            print ("ZtotalVal", ZtotalVal)
+            print ("StotalVal", StotalVal)
+            print ("XtotalVal", XtotalVal)
+            XtotalVal = module5(3,s_val, 45, 20)
+            XtotalVal = module5(3, reminder, 45, 17)
+            retVal=XtotalVal
+            print(StotalVal)
+        elif s_val>0 and x_val==0 and z_val==0:
+            print ("reminder", reminder)
+            print ("indVal", indVal)
+            print ("ZtotalVal", ZtotalVal)
+            print ("StotalVal", StotalVal)
+            print ("XtotalVal", XtotalVal)
+            StotalVal = module5(3,s_val, 45, 20)
+            XtotalVal = module5(3, reminder, 45, 17)
+            retVal=StotalVal
+            print(StotalVal)
     else:
         if s_val>0 :
             retVal=module3(s_val,20)
