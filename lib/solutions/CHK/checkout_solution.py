@@ -156,7 +156,8 @@ def checkout(skus):
             elif item == "F":
                 FtotalVal=module4(2,val,10)
             elif item =='K':
-                 KtotalVal=module5(2,val,150,80)
+                 KtotalVal=module5(2,val,120,70)
+                 print(KtotalVal)
             elif item =='P':
                  PtotalVal=module5(5,val,200,50)
             elif item == 'Q':
@@ -225,7 +226,7 @@ def checkout(skus):
 
 
 
-ret = checkout("X")
+ret = checkout("S")
 print (ret)
 
 # 200+130+50
