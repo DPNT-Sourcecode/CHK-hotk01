@@ -184,6 +184,7 @@ def checkout(skus):
                 MtotalVal=0
                 NtotalVal = module3(val, 40)
                 if val>=3:
+                    print("if")
                     MtotalVal=module4(3,val,15)
                 else:
                     MtotalVal =module3(m_val,15)
