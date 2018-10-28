@@ -183,7 +183,7 @@ def checkout(skus):
                 elif item == 'T':
                     TtotalVal = module5(3, val, 45, 20)
                 elif item == 'X':
-                    XtotalVal = module5(3, val, 45, 50)
+                    XtotalVal = module5(3, val, 45, 17)
                 elif item == 'Y':
                     YtotalVal = module5(3, val, 45, 20)
                 elif item == 'Z':
@@ -225,8 +225,8 @@ def checkout(skus):
 
 
 
-# ret = checkout("NNNMM")
-# print (ret)
+ret = checkout("X")
+print (ret)
 
 # 200+130+50
 
