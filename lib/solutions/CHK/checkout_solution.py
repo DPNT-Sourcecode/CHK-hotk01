@@ -115,6 +115,7 @@ def checkout(skus):
     QtotalVal = 0
     RtotalVal=0
     MtotalVal=0
+    NtotalVal=0
     if not lis:
         return 0
     elif len(lis)==0:
@@ -170,24 +171,28 @@ def checkout(skus):
             elif item in ("D"):
                 resttotalVal = module3(val, 15)
                 totalVal = totalVal + resttotalVal
-            elif item in ("M"):
-                m_val = val
-                MtotalVal = module3(m_val,15)
             elif item in ("I",):
                 resttotalVal = module3(val, 35)
                 totalVal = totalVal + resttotalVal
             elif item in ("J",):
                 resttotalVal = module3(val, 60)
                 totalVal = totalVal + resttotalVal
+            elif item in ("M"):
+                m_val = val
+                MtotalVal = module3(m_val,15)
+            elif item in ("N"):
+                MtotalVal=0
+                NtotalVal = module3(val, 40)
+                MtotalVal=module4(3,m_val,14)
             elif item not in idealVal:
                 return -1
 
             #totalVal=A_sum+B_sum
-        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal
+        return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal
 
 
 
-ret = checkout("MMM")
+ret = checkout("MMMN")
 print (ret)
 
 # 200+130+50
