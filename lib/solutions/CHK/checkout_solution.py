@@ -79,9 +79,6 @@ def module3(qty,price):
 def module4(qty,val,price):
     import math
     retVal=0
-    print("Val",val)
-    print("qty", qty)
-    print (price)
     if (val < qty and val > 0):
         retVal = (price * val)
     elif val == qty:
@@ -89,9 +86,7 @@ def module4(qty,val,price):
     elif val > qty:
         # indVal = int(math.floor(val/ 2))
         reminder = val % (qty+1)
-        print(reminder)
         priceToPaid=(((qty+1)*reminder)-(qty*reminder))
-        print("priceToPaid",priceToPaid)
         retVal=(priceToPaid*price)+(qty*price)
     return retVal
 
@@ -181,7 +176,7 @@ def checkout(skus):
 
 
 
-ret = checkout("UU")
+ret = checkout("FFFFFFF")
 print (ret)
 
 # 200+130+50
