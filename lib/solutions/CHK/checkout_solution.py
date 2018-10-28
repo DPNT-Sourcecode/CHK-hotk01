@@ -186,6 +186,7 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
     lis=[]
     cntr=0
     val=0
+    NextVal=0
     for z in range(z_val):
         lis.append("z")
     for s in range(s_val):
@@ -197,11 +198,13 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         cntr=cntr+1
         if cntr%3==0:
          val= val+45
-        elif finalVal=='s':
+         NextVal=cntr+1
+         print(NextVal)
+        elif lis[NextVal]=='s':
          val= val+s_price
-        elif finalVal=='x':
+        elif lis[NextVal]=='x':
          val= val+x_price
-        elif finalVal=='z':
+        elif lis[NextVal]=='z':
          val= val+z_price
     print ("val",val)
     print(lis)
