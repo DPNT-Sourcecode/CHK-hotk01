@@ -195,21 +195,31 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
         lis.append("x")
     for finalVal in lis:
         print (finalVal)
-        cntr=cntr+1
-        if cntr%3==0:
-         val= val+45
-         NextVal=cntr
-         print("NextVal",NextVal)
-         print("NextVal",lis[NextVal])
-        elif lis[NextVal]=='s' and NextVal!=0:
-         val= val+s_price
-         NextVal=NextVal+1
-        elif lis[NextVal]=='x' and NextVal!=0:
-         val= val+x_price
-         NextVal = NextVal + 1
-        elif lis[NextVal]=='z' and NextVal!=0:
-         val= val+z_price
-         NextVal = NextVal + 1
+        if len(lis)>3:
+            cntr=cntr+1
+            if cntr%3==0:
+             val= val+45
+             NextVal=cntr
+             print("NextVal",NextVal)
+             print("NextVal",lis[NextVal])
+            elif lis[NextVal]=='s' and NextVal!=0:
+             val= val+s_price
+             NextVal=NextVal+1
+            elif lis[NextVal]=='x' and NextVal!=0:
+             val= val+x_price
+             NextVal = NextVal + 1
+            elif lis[NextVal]=='z' and NextVal!=0:
+             val= val+z_price
+             NextVal = NextVal + 1
+        else:
+            if lis[cntr]=='s' and cntr!=0:
+             val= val+s_price
+            elif lis[cntr]=='x' and cntr!=0:
+             val= val+x_price
+            elif lis[cntr]=='z' and cntr!=0:
+             val= val+z_price
+             cntr=cntr+1
+
     print ("val",val)
     print(lis)
     return val
@@ -358,7 +368,7 @@ def checkout(skus):
 
 
 
-ret = checkout("CXYZYZC")
+ret = checkout("SX")
 print (ret)
 
 # 200+130+50
