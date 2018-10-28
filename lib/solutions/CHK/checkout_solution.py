@@ -182,7 +182,13 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
 
     return retVal
 
-
+def module7(z_val,z_price,x_val, x_price,s_val,s_price):
+    lis=[]
+    for z in range(z_val):
+        lis.append("z")
+        for s in range(s_val):
+            lis.append("s")
+    print(lis)
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -322,6 +328,7 @@ def checkout(skus):
             #totalVal=A_sum+B_sum
             # +StotalVal + TtotalVal + XtotalVal + YtotalVal + ZtotalVal
         ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
+        x = module7(z_val, 21, x_val, 17, s_val, 20)
         print ("ZtotalVal",ZtotalVal)
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+ZtotalVal
 
