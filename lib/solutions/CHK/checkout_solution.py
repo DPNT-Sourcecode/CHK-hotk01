@@ -122,10 +122,6 @@ def checkout(skus):
                      reminder = b_val % 2
                      indVal = int(math.floor(b_val / 2))
                      BtotalVal = ((indVal * 45) + (reminder * 30)) + totalVal
-            elif item == 'C':
-                totalVal = (val * 20)+totalVal
-            elif item == 'D':
-                totalVal = (val * 15)+totalVal
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
@@ -157,25 +153,23 @@ def checkout(skus):
             elif item in ("Y"):
                 resttotalVal = module3(val, 10)
                 totalVal = totalVal + resttotalVal
-            elif item in ("Y"):
-                resttotalVal = module3(val, 10)
+            elif item in ("Z",):
+                resttotalVal = module3(val, 50)
                 totalVal = totalVal + resttotalVal
-                
+            elif item in ("S",):
+                resttotalVal = module3(val, 30)
+                totalVal = totalVal + resttotalVal
+            elif item in ("M",):
+                resttotalVal = module3(val, 15)
+                totalVal = totalVal + resttotalVal
+            elif item in ("I",):
+                resttotalVal = module3(val, 35)
+                totalVal = totalVal + resttotalVal
+            elif item in ("J",):
+                resttotalVal = module3(val, 60)
+                totalVal = totalVal + resttotalVal
             elif item not in idealVal:
                 return -1
-            | W | 20 | |
-            | X | 90 | |
-            | Y | 10 | |
-            | Z | 50 | |
-            | S | 30 | |
-            | T | 20 |
-            | L | 90 | |
-            | M | 15 |
-            | I | 35 | |
-            | J | 60 |
-            | G | 20 |
-            | C | 20 | |
-            | D | 15 |
 
             #totalVal=A_sum+B_sum
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal
