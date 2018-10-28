@@ -92,7 +92,7 @@ def module4(qty,val,price):
         print("FdivVal",FdivVal)
         print("reminder", reminder)
         if reminder != 0:
-            FtotalVal = ((FdivVal + 1) * price)
+            retVal = ((FdivVal + 1) * price)
         else:
             # print("else")
             retVal = ((FdivVal + 1) * price)
