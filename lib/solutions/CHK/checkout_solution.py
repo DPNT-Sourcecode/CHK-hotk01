@@ -58,8 +58,10 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
         elif (b_new_val == OrigOfferCnt):
             retVal1 = OrigOfferPrice
     elif val > baseCnt:
-        print(3)
+        # print(3)
         retVal = (val * basePrice)
+        print (val)
+        print (baseCnt)
         indVal = int(math.floor(val / baseCnt))
         b_new_val = (origVal - indVal)
         if (b_new_val < OrigOfferCnt and b_new_val > 0):
