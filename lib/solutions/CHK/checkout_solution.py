@@ -55,21 +55,21 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
             indVal = int(math.floor(b_new_val / OrigOfferCnt))
             retVal1 = ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
         elif (b_new_val == OrigOfferCnt):
-            totalVal = OrigOfferPrice
-    elif val > 2:
+            retVal1 = OrigOfferPrice
+    elif val > baseCnt:
         # print(3)
         retVal = (val * basePrice)
-        indVal = int(math.floor(val / 2))
-        b_new_val = (b_val - indVal)
-        if (b_new_val < 2 and b_new_val > 0):
-            totalVal = (b_new_val * 30) + totalVal
-        elif (b_new_val > 2):
-            reminder = b_new_val % 2
-            indVal = int(math.floor(b_new_val / 2))
-            retVal1= ((indVal * 45) + (reminder * 30)) + totalVal
-        elif (b_new_val == 2):
-            retVal1 = 45
-
+        indVal = int(math.floor(val / baseCnt))
+        b_new_val = (origVal - indVal)
+        if (b_new_val < OrigOfferCnt and b_new_val > 0):
+            retVal = (b_new_val * origBasePrice)
+        elif (b_new_val > OrigOfferCnt):
+            reminder = b_new_val % OrigOfferCnt
+            indVal = int(math.floor(b_new_val / OrigOfferCnt))
+            retVal1= ((indVal * OrigOfferPrice) + (reminder * origBasePrice))
+        elif (b_new_val == OrigOfferCnt):
+            retVal1 = OrigOfferCnt
+    return retVal,retVal1
 
 
 # noinspection PyUnusedLocal
