@@ -76,6 +76,7 @@ def moodule2(val,baseCnt,basePrice,origVal,origBasePrice,OrigOfferPrice,OrigOffe
 def module3(qty,price):
     return qty*price
 
+def module4(qty,val)
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
