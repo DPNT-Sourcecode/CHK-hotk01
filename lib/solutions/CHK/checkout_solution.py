@@ -200,11 +200,11 @@ def module7(z_val,z_price,x_val, x_price,s_val,s_price):
              val= val+45
              print('finalVal',finalVal)
              print('cntr', cntr)
-            elif lis[cntr+1]=='s' and cntr+1>3:
+            elif lis[cntr]=='s' and cntr>2:
                 val = val + s_price
-            elif lis[cntr+1]=='x' and cntr+1>3:
+            elif lis[cntr]=='x' and cntr>2:
                 val = val + x_price
-            elif lis[cntr+1]=='z' and cntr+1>3:
+            elif lis[cntr]=='z' and cntr>2:
                 val = val + z_price
             cntr = cntr + 1
         else:
@@ -363,7 +363,7 @@ def checkout(skus):
 
 
 
-ret = checkout("XYZYZ")
+ret = checkout("STXZ")
 print (ret)
 
 # 200+130+50
