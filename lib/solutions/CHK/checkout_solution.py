@@ -94,6 +94,8 @@ def module4(qty,val,price):
         print("reminder", reminder)
         if FdivVal==1 and reminder==1:
             retVal=qty*price
+        elif FdivVal == 1 and reminder > 1:
+            retVal = (qty * price)+(reminder*price)
         elif reminder != 0:
             retVal = ((FdivVal + 1) * price)
         else:
@@ -187,7 +189,7 @@ def checkout(skus):
 
 
 
-ret = checkout("UUUUU")
+ret = checkout("UUUUUU")
 print (ret)
 
 # 200+130+50
