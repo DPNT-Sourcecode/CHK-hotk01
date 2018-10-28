@@ -127,6 +127,10 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
                 indVal = totalVal / 3
                 if reminder == 0:
                     retVal = (indVal * 45)+ZtotalVal
+                else:
+                    StotalVal=module5(3, (indVal * 3), 45, 20)
+                    XtotalVal = module5(3, (indVal * 3), 45, 17)
+                    retVal=ZtotalVal+StotalVal+XtotalVal
             # XtotalVal = module5(3, reminder, 45, 17)
             # retVal = ZtotalVal + XtotalVal
 
