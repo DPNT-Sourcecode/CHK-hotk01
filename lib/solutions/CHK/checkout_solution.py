@@ -316,12 +316,12 @@ def checkout(skus):
             #totalVal=A_sum+B_sum
             # +StotalVal + TtotalVal + XtotalVal + YtotalVal + ZtotalVal
         ZtotalVal=module6(z_val,21,x_val, 17,s_val,20)
-        # print (ZtotalVal)
+        print ("ZtotalVal",ZtotalVal)
         return totalVal+BtotalVal+EtotalVal+FtotalVal+AtotalVal+VtotalVal+HtotalVal+UtotalVal+KtotalVal+PtotalVal+QtotalVal+RtotalVal+MtotalVal+NtotalVal+ZtotalVal
 
 
 
-ret = checkout("ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ")
+ret = checkout("CXYZYZC")
 print (ret)
 
 # 200+130+50
