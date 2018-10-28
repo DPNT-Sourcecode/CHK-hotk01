@@ -111,6 +111,9 @@ def module6(z_val,z_price,x_val, x_price,s_val,s_price):
                 ZtotalVal=module5(3, (indVal*3), 45, 21)
                 StotalVal = module5(3, reminder, 45, 20)
                 retVal=ZtotalVal+StotalVal
+            elif z_val<s_val:
+                print ("indVal", indVal)
+                print ("reminder", reminder)
 
     return retVal
 
