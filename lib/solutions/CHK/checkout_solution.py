@@ -90,7 +90,16 @@ def module4(qty,val,price):
         retVal=(priceToPaid*price)+(qty*price)
     return retVal
 
-def module4
+def module5(qty,val,price,basePrice):
+    import math
+    retVal=0
+    if val < qty:
+        retVal = (val * basePrice)
+    else:
+        reminder = val % qty
+        indVal = int(math.floor(val / qty))
+        retVal = ((indVal * price) + (reminder * basePrice))
+     return  retVal
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -133,12 +142,7 @@ def checkout(skus):
                 VtotalVal = module1(val, 2, 90, 3, 130, 50) #2V for 90, 3V for 130
             elif item =='B':
                  b_val=val
-                 if b_val < 2:
-                     BtotalVal = (b_val * 30) + totalVal
-                 else:
-                     reminder = b_val % 2
-                     indVal = int(math.floor(b_val / 2))
-                     BtotalVal = ((indVal * 45) + (reminder * 30)) + totalVal
+                 
             elif item =='E':
                 BtotalVal=0
                 EtotalVal ,BtotalVal=moodule2(val,2,40,b_val,30,45,1)
